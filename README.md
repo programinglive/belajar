@@ -25,6 +25,9 @@ Repository ini adalah repository open source yang diperuntukan untuk kalian yang
 - composer install
 - php artisan migrate
 - php artisan tinker
+- npm install
+- npm run build
+- npm run dev
 
 ```
 User::factory(5)->create()
