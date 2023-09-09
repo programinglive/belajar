@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Livewire\Counter;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('landingpage');
 })->name('landingpage');
+
+Route::get('/phpinfo', function(){
+    return phpinfo();
+})->name('phpinfo');
+
+Route::get('counter', Counter::class)->name('counter');
 
 Route::get('/crud-with-jquery', function () {
 
