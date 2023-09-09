@@ -64,7 +64,7 @@
 
     <main>
 
-      <section class="py-5 text-center container">
+      <section class="py-3 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light text-light">Seri Belajar</h1>
@@ -78,18 +78,18 @@
         </div>
       </section>
 
-      <div class="album py-5">
+      <div class="album">
         <div class="container">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
               <div class="card shadow-sm p-2 rounded">
-                <img src="/crud_with_jquery.png" alt="" class="img-">
+                <img src="/crud_with_jquery.png" alt="" class="img-thumbnail" style="max-height: 180px;">
 
                 <div class="card-body">
-                  <p class="card-text">Crud with jQuery Data table and Bootstrap Modal</p>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <p class="card-text" style="min-height: 70px; max-height: 150px;">Crud with jQuery Data table and Bootstrap Modal</p>
+                  <div class="d-flex justify-content-end">
                     <div class="btn-group">
-                      <a href="{{ route('crud.with.jquery') }}" class="btn btn-sm btn-success">View</a>
+                      <a href="{{ route('crud.with.jquery') }}" class="btn btn-success">View</a>
                     </div>
                   </div>
                 </div>
@@ -97,13 +97,13 @@
             </div>
             <div class="col">
               <div class="card shadow-sm p-2 rounded">
-                <img src="/livewire_sample.png" alt="" class="img-">
+                <img src="/livewire_sample.png" alt="" class="img-thumbnail" style="max-height: 180px;">
 
                 <div class="card-body">
-                  <p class="card-text">Simple Counter App Using Livewire.</p>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <p class="card-text" style="min-height: 70px; max-height: 150px;">Simple Counter App Using Livewire.</p>
+                  <div class="d-flex justify-content-end">
                     <div class="btn-group">
-                      <a href="{{ route('counter') }}" type="button" class="btn btn-sm btn-success">View</a>
+                      <a href="{{ route('counter') }}" class="btn btn-success">View</a>
                     </div>
                   </div>
                 </div>
@@ -111,16 +111,14 @@
             </div>
             <div class="col">
               <div class="card shadow-sm p-2 rounded">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <img src="/crud_livewire_plus_external_controller.png" alt="" class="img-thumbnail" style="max-height: 180px;">
 
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <p class="card-text" style="min-height: 70px; max-height: 150px;">Livewire CRUD + External Default Laravel Controller.</p>
+                  <div class="d-flex justify-content-end">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <a href="{{ route('userpages') }}" class="btn btn-success">View</a>
                     </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
