@@ -36,14 +36,14 @@
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">About</h4>
-              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+              <p class="text-muted">Salah satu opsi website untuk beljar Web Development.</p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Contact</h4>
               <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
+                <li><a href="https://github.com/programinglive/belajar" class="text-white">Follow on Github</a></li>
+                <li><a href="https://www.tiktok.com/@mahatma.mahardhika" class="text-white">Follow on Tittok</a></li>
+                <li><a href="mailto:mahatma.mahardhika@programinglive.com" class="text-white">Email me</a></li>
               </ul>
             </div>
           </div>
@@ -80,7 +80,6 @@
 
       <div class="album py-5">
         <div class="container">
-
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
               <div class="card shadow-sm p-2 rounded">
@@ -139,8 +138,6 @@
         <p class="float-end mb-1">
           <a href="#">Back to top</a>
         </p>
-        <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
       </div>
     </footer>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
