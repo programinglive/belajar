@@ -87,7 +87,7 @@
                 <img src="/crud_with_jquery.png" alt="" class="img-">
 
                 <div class="card-body">
-                  <p class="card-text">Crud with jQuery and Bootstrap Modal</p>
+                  <p class="card-text">Crud with jQuery Data table and Bootstrap Modal</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a href="{{ route('crud.with.jquery') }}" class="btn btn-sm btn-outline-secondary">View</a>
