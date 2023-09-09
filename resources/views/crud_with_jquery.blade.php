@@ -47,7 +47,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form action="updateUser" method="POST">
+          <form action="updateUser" method="POST" id="userForm">
             
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="hidden" name="userid" id="userid">
@@ -59,10 +59,10 @@
               <label for="email">Email</label>
               <input type="text" id="email" name="email" class="form-control">
             </div>
-            <button type="submit" class="btn btn-primary">Save changes</button>
           </form>
         </div>
         <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" form="userForm">Save changes</button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
