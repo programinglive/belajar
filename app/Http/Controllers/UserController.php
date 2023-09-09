@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function crud_with_jquery($value='')
+    {
+        $users = User::all();
+
+        return view('crud_with_jquery', compact('users'));
+    }
+
     public function getUserById($id)
     {
         return User::find($id);

@@ -24,15 +24,15 @@ Route::get('/phpinfo', function(){
     return phpinfo();
 })->name('phpinfo');
 
+/**
+ * Simple Counter Application with Livewire
+ */
 Route::get('counter', Counter::class)->name('counter');
 
-Route::get('/crud-with-jquery', function () {
-
-    $users = User::all();
-
-    return view('crud_with_jquery', compact('users'));
-})->name('crud.with.jquery');
-
+/**
+ * Simple CRUD with Jquery Datatable and Bootstrap Modal
+ */
+Route::get('/crud-with-jquery', [UserController::class, 'crud_with_jquery'])->name('crud.with.jquery');
 Route::get('getUserById/{id}', [UserController::class, 'getUserById'])->name('getUserById');
 Route::post('updateUser', [UserController::class, 'updateUser']);
 Route::get('delete/{id}', [UserController::class, 'deleteUser']);

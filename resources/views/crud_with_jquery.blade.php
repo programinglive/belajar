@@ -4,12 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Programinglive | Belajar Membuat Website</title>
+  <meta name="description" content="A Simple CRUD with Jquery Datatable + Bootstrap Modal">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 </head>
-<body>
-  <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal">tambah User</button>
+<body class="p-5 bg-dark">
+  <h1 class="text-center mb-5 text-light">A Simple CRUD with Jquery Datatable + Bootstrap Modal</h1>
   <div class="card p-5">
+    <div class="mb-5">
+      <button class="btn btn-primary float-end"  data-bs-toggle="modal" data-bs-target="#exampleModal">tambah User</button>
+    </div>
     <table id="myTable" class="display">
       <thead>
         <tr>

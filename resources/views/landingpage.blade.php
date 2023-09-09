@@ -89,7 +89,7 @@
                   <p class="card-text">Crud with jQuery Data table and Bootstrap Modal</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a href="{{ route('crud.with.jquery') }}" class="btn btn-sm btn-outline-secondary">View</a>
+                      <a href="{{ route('crud.with.jquery') }}" class="btn btn-sm btn-success">View</a>
                     </div>
                   </div>
                 </div>
@@ -103,7 +103,7 @@
                   <p class="card-text">Simple Counter App Using Livewire.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a href="{{ route('counter') }}" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                      <a href="{{ route('counter') }}" type="button" class="btn btn-sm btn-success">View</a>
                     </div>
                   </div>
                 </div>
