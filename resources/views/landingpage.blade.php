@@ -70,7 +70,7 @@
         <div class="container">
           <a href="/" class="navbar-brand d-flex align-items-center gap-1">
             <img src="/images/logo_programinglive.jpg" alt="Logo Programinglive" class="rounded" style="max-height: 20px;">
-            <strong>Programinglive | Belajar Membuat Website</strong>
+            <strong>ProgramingLive Series</strong>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -78,15 +78,13 @@
         </div>
       </div>
     </header>
-
     <main>
-
       <section class="py-3 text-center container">
-        <div class="row py-lg-5">
+        <div class="row py-3">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light text-light">Seri Belajar</h1>
-            <p class="lead text-muted">
-              Selamat datang di "Belajar Membuat Website: Panduan Lengkap untuk Pemula," sumber daya online yang lengkap untuk Anda yang ingin memahami dasar-dasar pembuatan website dan mengembangkan keterampilan Anda dalam dunia web development. Apakah Anda seorang pemula yang ingin memulai perjalanan Anda dalam dunia web development atau seorang profesional yang ingin meningkatkan kemampuan Anda, kami memiliki semua yang Anda butuhkan di sini.
+            <h1 class="text-light mb-4">Website Development</h1>
+            <p class="text-muted fs-sm-1 mb-4">
+              Selamat datang di <span class="fw-bold">"Website Development"</span> Panduan Lengkap untuk Pemula," sumber daya online yang lengkap untuk Anda yang ingin memahami dasar-dasar pembuatan website dan mengembangkan keterampilan Anda dalam dunia web development. Apakah Anda seorang pemula yang ingin memulai perjalanan Anda dalam dunia web development atau seorang profesional yang ingin meningkatkan kemampuan Anda, kami memiliki semua yang Anda butuhkan di sini.
             </p>
             <a href="https://github.com/programinglive/belajar" class="btn btn-primary btn-lg my-2 w-3" style="min-width: 260px;">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-light" style="max-height: 30px;">
@@ -97,48 +95,42 @@
           </div>
         </div>
       </section>
-
-      <div class="album">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-              <div class="card shadow-sm p-2 rounded">
-                <img src="/crud_with_jquery.png" alt="" class="rounded" style="max-height: 170px;">
-
-                <div class="card-body">
-                  <p class="card-text" style="min-height: 30px; max-height: 150px;">Crud with jQuery Data table and Bootstrap Modal</p>
-                  <div class="d-flex justify-content-end">
-                    <div class="btn-group">
-                      <a href="{{ route('crud.with.jquery') }}" class="btn btn-success">View</a>
-                    </div>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm p-2 rounded">
+              <img src="/crud_with_jquery.png" alt="" class="rounded" style="max-height: 170px;">
+              <div class="card-body">
+                <p class="card-text" style="min-height: 30px; max-height: 150px;">Crud with jQuery Data table and Bootstrap Modal</p>
+                <div class="d-flex justify-content-end">
+                  <div class="btn-group">
+                    <a href="{{ route('crud.with.jquery') }}" class="btn btn-success">View</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card shadow-sm p-2 rounded">
-                <img src="/livewire_sample.png" alt="" class="rounded" style="max-height: 170px;">
-
-                <div class="card-body">
-                  <p class="card-text" style="min-height: 30px; max-height: 150px;">Simple Counter App Using Livewire.</p>
-                  <div class="d-flex justify-content-end">
-                    <div class="btn-group">
-                      <a href="{{ route('counter') }}" class="btn btn-success">View</a>
-                    </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm p-2 rounded">
+              <img src="/livewire_sample.png" alt="" class="rounded" style="max-height: 170px;">
+              <div class="card-body">
+                <p class="card-text" style="min-height: 30px; max-height: 150px;">Simple Counter App Using Livewire.</p>
+                <div class="d-flex justify-content-end">
+                  <div class="btn-group">
+                    <a href="{{ route('counter') }}" class="btn btn-success">View</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card shadow-sm p-2 rounded">
-                <img src="/crud_livewire_plus_external_controller.png" alt="" class="rounded" style="max-height: 170px;">
-
-                <div class="card-body">
-                  <p class="card-text" style="min-height: 30px; max-height: 150px;">Livewire CRUD + External Default Laravel Controller.</p>
-                  <div class="d-flex justify-content-end">
-                    <div class="btn-group">
-                      <a href="{{ route('userpages') }}" class="btn btn-success">View</a>
-                    </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm p-2 rounded">
+              <img src="/crud_livewire_plus_external_controller.png" alt="" class="rounded" style="max-height: 170px;">
+              <div class="card-body">
+                <p class="card-text" style="min-height: 30px; max-height: 150px;">Livewire CRUD + External Default Laravel Controller.</p>
+                <div class="d-flex justify-content-end">
+                  <div class="btn-group">
+                    <a href="{{ route('userpages') }}" class="btn btn-success">View</a>
                   </div>
                 </div>
               </div>
@@ -146,9 +138,7 @@
           </div>
         </div>
       </div>
-
     </main>
-
     <footer class="text-muted py-5">
       <div class="container">
         <p class="float-end mb-1">
