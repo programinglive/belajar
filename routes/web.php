@@ -15,12 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function(){
+    return view('landingpage');
+})->name('landingpage');
+
+Route::get('/crud-with-jquery', function () {
 
     $users = User::all();
 
-    return view('welcome', compact('users'));
-});
+    return view('crud_with_jquery', compact('users'));
+})->name('crud.with.jquery');
 
 Route::get('getUserById/{id}', [UserController::class, 'getUserById'])->name('getUserById');
 Route::post('updateUser', [UserController::class, 'updateUser']);
