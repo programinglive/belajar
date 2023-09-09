@@ -29,7 +29,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="bg-dark">
     <header>
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
@@ -67,7 +67,7 @@
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Seri Belajar</h1>
+            <h1 class="fw-light text-light">Seri Belajar</h1>
             <p class="lead text-muted">
               Selamat datang di "Belajar Membuat Website: Panduan Lengkap untuk Pemula," sumber daya online yang lengkap untuk Anda yang ingin memahami dasar-dasar pembuatan website dan mengembangkan keterampilan Anda dalam dunia web development. Apakah Anda seorang pemula yang ingin memulai perjalanan Anda dalam dunia web development atau seorang profesional yang ingin meningkatkan kemampuan Anda, kami memiliki semua yang Anda butuhkan di sini.
             </p>
@@ -78,13 +78,13 @@
         </div>
       </section>
 
-      <div class="album py-5 bg-light">
+      <div class="album py-5">
         <div class="container">
 
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
-              <div class="card shadow-sm">
-                <img src="/crud_with_jquery.png" alt="">
+              <div class="card shadow-sm p-2 rounded">
+                <img src="/crud_with_jquery.png" alt="" class="img-">
 
                 <div class="card-body">
                   <p class="card-text">Crud with jQuery and Bootstrap Modal</p>
@@ -97,7 +97,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card shadow-sm">
+              <div class="card shadow-sm p-2 rounded">
                 <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
 
                 <div class="card-body">
@@ -113,7 +113,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card shadow-sm">
+              <div class="card shadow-sm p-2 rounded">
                 <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
 
                 <div class="card-body">
