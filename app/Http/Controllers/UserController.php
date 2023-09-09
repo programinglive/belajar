@@ -7,6 +7,20 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public static function saveUserFromLivewire($userData){
+        User::create($userData);
+    }
+
+    public static function updateUserFromLivewire(User $user, $userData){
+        $user->update($userData);
+    }
+
+    public static function deleteUserFromLivewire($userId){
+        $user = User::find($userId);
+        
+        $user->delete();
+    }
+
     public function crud_with_jquery($value='')
     {
         $users = User::all();

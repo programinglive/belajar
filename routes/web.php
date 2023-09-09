@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Livewire\Counter;
+use App\Livewire\UserPage;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -36,3 +37,9 @@ Route::get('/crud-with-jquery', [UserController::class, 'crud_with_jquery'])->na
 Route::get('getUserById/{id}', [UserController::class, 'getUserById'])->name('getUserById');
 Route::post('updateUser', [UserController::class, 'updateUser']);
 Route::get('delete/{id}', [UserController::class, 'deleteUser']);
+
+
+/**
+ * User External Controller to Livewire Component
+ */
+Route::get('userpages', UserPage::class)->name('userpages');
