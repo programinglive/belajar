@@ -88,9 +88,12 @@
             <p class="lead text-muted">
               Selamat datang di "Belajar Membuat Website: Panduan Lengkap untuk Pemula," sumber daya online yang lengkap untuk Anda yang ingin memahami dasar-dasar pembuatan website dan mengembangkan keterampilan Anda dalam dunia web development. Apakah Anda seorang pemula yang ingin memulai perjalanan Anda dalam dunia web development atau seorang profesional yang ingin meningkatkan kemampuan Anda, kami memiliki semua yang Anda butuhkan di sini.
             </p>
-            <p>
-              <a href="#" class="btn btn-primary my-2">Mulai</a>
-            </p>
+            <a href="https://github.com/programinglive/belajar" class="btn btn-primary btn-lg my-2 w-3" style="min-width: 260px;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-light" style="max-height: 30px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Download Repository
+            </a>
           </div>
         </div>
       </section>
