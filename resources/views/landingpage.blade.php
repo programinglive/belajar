@@ -101,7 +101,7 @@
             <div class="card shadow-sm p-2 rounded">
               <img src="/crud_with_jquery.png" alt="" class="rounded" style="max-height: 170px;">
               <div class="card-body">
-                <p class="card-text" style="min-height: 30px; max-height: 150px;">Crud with jQuery Data table and Bootstrap Modal</p>
+                <p class="card-text" style="min-height: 70px; max-height: 150px;">Crud with jQuery Data table and Bootstrap Modal</p>
                 <div class="d-flex justify-content-end">
                   <div class="btn-group">
                     <a href="{{ route('crud.with.jquery') }}" class="btn btn-success">View</a>
@@ -114,7 +114,7 @@
             <div class="card shadow-sm p-2 rounded">
               <img src="/livewire_sample.png" alt="" class="rounded" style="max-height: 170px;">
               <div class="card-body">
-                <p class="card-text" style="min-height: 30px; max-height: 150px;">Simple Counter App Using Livewire.</p>
+                <p class="card-text" style="min-height: 70px; max-height: 150px;">Simple Counter App Using Livewire.</p>
                 <div class="d-flex justify-content-end">
                   <div class="btn-group">
                     <a href="{{ route('counter') }}" class="btn btn-success">View</a>
@@ -127,7 +127,7 @@
             <div class="card shadow-sm p-2 rounded">
               <img src="/crud_livewire_plus_external_controller.png" alt="" class="rounded" style="max-height: 170px;">
               <div class="card-body">
-                <p class="card-text" style="min-height: 30px; max-height: 150px;">Livewire CRUD + External Default Laravel Controller.</p>
+                <p class="card-text" style="min-height: 70px; max-height: 150px;">Livewire CRUD + External Default Laravel Controller.</p>
                 <div class="d-flex justify-content-end">
                   <div class="btn-group">
                     <a href="{{ route('userpages') }}" class="btn btn-success">View</a>
