@@ -34,5 +34,6 @@ you're all set
 
 ## Built With
 
-- Laravel 10
+- Laravel v10
+- Livewire v3
 
