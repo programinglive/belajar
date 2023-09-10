@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Livewire\Counter;
+use App\Livewire\UploadPage;
 use App\Livewire\UserPage;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -43,3 +44,8 @@ Route::get('delete/{id}', [UserController::class, 'deleteUser']);
  * User External Controller to Livewire Component
  */
 Route::get('userpages', UserPage::class)->name('userpages');
+
+/**
+ * Upload file with Livewire 
+ */
+Route::get('uploadpages', UploadPage::class)->name('uploadpages');
