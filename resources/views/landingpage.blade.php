@@ -138,7 +138,7 @@
           </div>
           <div class="col">
             <div class="card shadow-sm p-2 rounded">
-              <img src="/crud_livewire_plus_external_controller.png" alt="" class="rounded" style="max-height: 170px;">
+              <img src="/upload_file_with_livewire.png" alt="" class="rounded" style="max-height: 170px;">
               <div class="card-body">
                 <p class="card-text" style="min-height: 30px; max-height: 150px;">Upload file with Laravel Livewire.</p>
                 <div class="d-flex justify-content-end">
