@@ -10,9 +10,11 @@
         @endif
       </div>
       <form id="uploadFile" wire:submit="save">
-        <input type="file" wire:model="photo">
-        @error('photo') <span class="error">{{ $message }}</span> @enderror
+        <input type="file" wire:model="photo" required>
         <button wire:loading.attr="disabled" type="submit" class="btn btn-primary">Save photo</button>
+        <div>
+          @error('photo') <span class="text-danger">{{ $message }}</span> @enderror
+        </div>
       </form>
       <table class="table table-bordered table-hover">
         <thead>

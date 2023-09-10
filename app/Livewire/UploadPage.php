@@ -17,15 +17,19 @@ class UploadPage extends Component
  
     public function save()
     {
-        $path = $this->photo->store('photos');
+        if($this->photo){
+            $path = $this->photo->store('photos');
 
-        ImageGallery::create([
-            'image_path' => $path
-        ]);
+            ImageGallery::create([
+                'image_path' => $path
+            ]);
 
-        $this->reset();
+            $this->reset();
 
-        $this->js('document.getElementById("uploadFile").reset()');
+            $this->js('document.getElementById("uploadFile").reset()');
+        } else {
+            $this->addError('photo', 'Please Insert an Image');
+        }
     }
 
     public function deleteImage(ImageGallery $photo)
