@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Livewire\CartPage;
 use App\Livewire\Counter;
+use App\Livewire\ProductPage;
 use App\Livewire\UploadPage;
 use App\Livewire\UserPage;
 use App\Models\User;
@@ -49,3 +51,13 @@ Route::get('userpages', UserPage::class)->name('userpages');
  * Upload file with Livewire 
  */
 Route::get('uploadpages', UploadPage::class)->name('uploadpages');
+
+/**
+ * Cart 
+ */
+Route::get('productPages', ProductPage::class)->name('productPages');
+
+/**
+ * Cart 
+ */
+Route::get('cartPages', CartPage::class)->name('cartPages');

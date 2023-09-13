@@ -149,6 +149,32 @@
               </div>
             </div>
           </div>
+          <div class="col">
+            <div class="card shadow-sm p-2 rounded">
+              <img src="/product_page_with_livewire.png" alt="" class="rounded" style="max-height: 170px;">
+              <div class="card-body">
+                <p class="card-text" style="min-height: 30px; max-height: 150px;">Add Product with Laravel Livewire.</p>
+                <div class="d-flex justify-content-end">
+                  <div class="btn-group">
+                    <a href="{{ route('productPages') }}" class="btn btn-success">View</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm p-2 rounded">
+              <img src="/cart_page_with_livewire.png" alt="" class="rounded" style="max-height: 170px;">
+              <div class="card-body">
+                <p class="card-text" style="min-height: 30px; max-height: 150px;">Cart with Laravel Livewire.</p>
+                <div class="d-flex justify-content-end">
+                  <div class="btn-group">
+                    <a href="{{ route('cartPages') }}" class="btn btn-success">View</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
