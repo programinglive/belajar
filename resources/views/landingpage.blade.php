@@ -175,6 +175,19 @@
               </div>
             </div>
           </div>
+          <div class="col">
+            <div class="card shadow-sm p-2 rounded">
+              <img src="/sample_mail_with_laravel.png" alt="" class="rounded" style="max-height: 170px;">
+              <div class="card-body">
+                <p class="card-text" style="min-height: 30px; max-height: 150px;">Send Email with Laravel Livewire.</p>
+                <div class="d-flex justify-content-end">
+                  <div class="btn-group">
+                    <a href="{{ route('sendmail') }}" class="btn btn-success" target="_blank">View</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

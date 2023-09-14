@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SendMailController;
 use App\Http\Controllers\UserController;
 use App\Livewire\CartPage;
 use App\Livewire\Counter;
@@ -8,17 +9,6 @@ use App\Livewire\UploadPage;
 use App\Livewire\UserPage;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function(){
     return view('landingpage');
@@ -53,7 +43,7 @@ Route::get('userpages', UserPage::class)->name('userpages');
 Route::get('uploadpages', UploadPage::class)->name('uploadpages');
 
 /**
- * Cart 
+ * Product 
  */
 Route::get('productPages', ProductPage::class)->name('productPages');
 
@@ -61,3 +51,10 @@ Route::get('productPages', ProductPage::class)->name('productPages');
  * Cart 
  */
 Route::get('cartPages', CartPage::class)->name('cartPages');
+
+
+/**
+ * Send EMail
+ */
+
+Route::get('/send-mail', [SendMailController::class, 'index'])->name('sendmail');
