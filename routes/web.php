@@ -4,6 +4,7 @@ use App\Http\Controllers\SendMailController;
 use App\Http\Controllers\UserController;
 use App\Livewire\CartPage;
 use App\Livewire\Counter;
+use App\Livewire\ModalLivewireTigaPage;
 use App\Livewire\ProductPage;
 use App\Livewire\UploadPage;
 use App\Livewire\UserPage;
@@ -58,3 +59,10 @@ Route::get('cartPages', CartPage::class)->name('cartPages');
  */
 
 Route::get('/send-mail', [SendMailController::class, 'index'])->name('sendmail');
+
+
+/**
+ * Modal Livewire 3
+ */
+
+Route::get('/modalLivewireTiga', ModalLivewireTigaPage::class)->name('modalLivewireTiga');
