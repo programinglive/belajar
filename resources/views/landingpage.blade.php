@@ -195,7 +195,7 @@
                 <p class="card-text" style="min-height: 30px; max-height: 150px;">CRUD Laravel Livewire 3 + Bootstrap Modal.</p>
                 <div class="d-flex justify-content-end">
                   <div class="btn-group">
-                    <a href="{{ route('sendmail') }}" class="btn btn-success" target="_blank">View</a>
+                    <a href="{{ route('modalLivewireTiga') }}" class="btn btn-success" target="_blank">View</a>
                   </div>
                 </div>
               </div>
