@@ -25,7 +25,7 @@ Repository ini adalah repository open source yang diperuntukan untuk kalian yang
 ## How To Use
 
 - composer install
-- php artisan migrate
+- php artisan migrate:fresh --seed
 - php artisan tinker
 - php artisan livewire:publish --config
 - php artisan livewire:publish --pagination

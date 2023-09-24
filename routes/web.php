@@ -6,6 +6,7 @@ use App\Livewire\CartPage;
 use App\Livewire\Counter;
 use App\Livewire\ModalLivewireTigaPage;
 use App\Livewire\ProductPage;
+use App\Livewire\RegionSelector;
 use App\Livewire\UploadPage;
 use App\Livewire\UserPage;
 use App\Models\User;
@@ -66,3 +67,9 @@ Route::get('/send-mail', [SendMailController::class, 'index'])->name('sendmail')
  */
 
 Route::get('/modalLivewireTiga', ModalLivewireTigaPage::class)->name('modalLivewireTiga');
+
+/**
+ * Modal Livewire 3
+ */
+
+Route::get('/regionSelector', RegionSelector::class)->name('regionSelector');

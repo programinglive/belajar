@@ -201,6 +201,19 @@
               </div>
             </div>
           </div>
+          <div class="col">
+            <div class="card shadow-sm p-2 rounded">
+              <img src="/simple_selector_region.png" alt="" class="rounded" style="max-height: 170px;">
+              <div class="card-body">
+                <p class="card-text" style="min-height: 30px; max-height: 150px;">Region Selector</p>
+                <div class="d-flex justify-content-end">
+                  <div class="btn-group">
+                    <a href="{{ route('regionSelector') }}" class="btn btn-success" target="_blank">View</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
