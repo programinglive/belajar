@@ -40,17 +40,17 @@ Route::get('delete/{id}', [UserController::class, 'deleteUser']);
 Route::get('userpages', UserPage::class)->name('userpages');
 
 /**
- * Upload file with Livewire 
+ * Upload file with Livewire
  */
 Route::get('uploadpages', UploadPage::class)->name('uploadpages');
 
 /**
- * Product 
+ * Product
  */
 Route::get('productPages', ProductPage::class)->name('productPages');
 
 /**
- * Cart 
+ * Cart
  */
 Route::get('cartPages', CartPage::class)->name('cartPages');
 
@@ -73,3 +73,13 @@ Route::get('/modalLivewireTiga', ModalLivewireTigaPage::class)->name('modalLivew
  */
 
 Route::get('/regionSelector', RegionSelector::class)->name('regionSelector');
+
+
+
+Route::get('okay', function(){
+    $user = User::first();
+
+    $ok = $user->can('helloworld') ? 'yes' : 'no';
+
+    return $ok;
+});
