@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SendMailController;
 use App\Http\Controllers\UserController;
-use App\Http\Resources\FruitColletion;
 use App\Livewire\CartPage;
 use App\Livewire\Counter;
 use App\Livewire\ModalLivewireTigaPage;
@@ -10,10 +10,8 @@ use App\Livewire\ProductPage;
 use App\Livewire\RegionSelector;
 use App\Livewire\UploadPage;
 use App\Livewire\UserPage;
-use App\Models\Fruit;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 
 Route::get('/', function(){
     return view('landingpage');
@@ -82,26 +80,10 @@ Route::get('/regionSelector', RegionSelector::class)->name('regionSelector');
 Route::get('okay', function(){
     $user = User::first();
 
-    $ok = $user->can('helloworld') ? 'yes' : 'no';
-
-    return $ok;
+    return $user->can('helloworld') ? 'yes' : 'no';
 });
 
-Route::get('yasmavoca', function(){
-   return view('yasmavoca');
-});
 
-Route::get('fruit/{id}', function(String $id){
-    return new FruitColletion(Fruit::find($id));
-});
 
-Route::get('fruits', function(){
-    return new FruitColletion(Fruit::all());
-});
-
-Route::post('fruit', function(Request $request){
-
-    Fruit::create($request->all());
-
-    return redirect('/fruits');
-});
+Route::get('auth/google', [LoginController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [LoginController::class, 'handleGoogleCallback']);

@@ -13,4 +13,5 @@ class Fruit extends Model
         'name',
         'price',
     ];
+
 }
