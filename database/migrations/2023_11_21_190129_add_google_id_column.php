@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function($table) {
-            $table->integer('google_id');
+            $table->integer('google_id')->nullable();
         });
     }
 
