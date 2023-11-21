@@ -34,6 +34,6 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID', '541432401710-91ra3li2ra1km5atq4v3inqctbcuur3q.apps.googleusercontent.com'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET', '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'),
-        'redirect' => 'https://localhost:8000/auth/google/callback',
+        'redirect' => 'https://belajar.programinglive.com/auth/google/callback',
     ],
 ];
