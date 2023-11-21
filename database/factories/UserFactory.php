@@ -22,6 +22,7 @@ class UserFactory extends Factory
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'google_id' => '541432401710-to6sglda7v6dm1i22so3oo9mjgi8v79n.apps.googleusercontent.com', // password
             'remember_token' => Str::random(10),
         ];
     }

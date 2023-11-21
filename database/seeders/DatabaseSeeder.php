@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ProvinceSeeder::class,
             DistrictSeeder::class,
-            FruitSeeder::class
+            FruitSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }
