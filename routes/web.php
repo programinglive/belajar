@@ -13,9 +13,7 @@ use App\Livewire\UserPage;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function(){
-    return view('landingpage');
-})->name('landingpage');
+Route::get('/', function(){ return 'hello'; })->name('home');
 
 Route::get('/phpinfo', function(){
     return phpinfo();
