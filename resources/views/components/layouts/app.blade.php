@@ -24,7 +24,9 @@
     <link rel="manifest" href="{{ asset('/images/manifest.json')}}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
-
+    
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1286203107102917"
