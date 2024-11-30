@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="bg-[#964B00] text-white">
 	<div class="container mx-auto flex justify-between items-center px-6 py-4 md:px-12">
-		<a href="#" class="text-2xl font-bold text-[#F7F7F7]">ProgramingLive</a>
+		<a href="/" class="text-2xl font-bold text-[#F7F7F7]">ProgramingLive</a>
 		<div class="hidden md:flex">
 			<button class="bg-[#964B00] px-4 py-2 rounded text-[#F7F7F7] hover:bg-[#783300]">Masuk</button>
 			<button class="ml-2 bg-transparent border border-[#F7F7F7] px-4 py-2 rounded hover:bg-[#F7F7F7] hover:text-[#783300]">Daftar</button>

@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="bg-[#964B00] text-[#F7F7F7] py-6">
+<footer class="bg-[#783300] text-[#F7F7F7] py-6">
 	<div class="container mx-auto px-6 flex flex-col items-center space-y-4">
 		<p>&copy; 2024 ProgramingLive. All rights reserved.</p>
 		<div class="space-x-4">

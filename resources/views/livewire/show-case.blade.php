@@ -1,7 +1,7 @@
 <!-- Showcase Section -->
 <section class="bg-[#964B00] text-[#F7F7F7] py-12">
 	<div class="container mx-auto px-6">
-		<h2 class="text-3xl font-bold text-center">Seduh Kode, Bangun Aplikasi</h2>
+		<h2 class="text-3xl font-bold text-center">Seduh Kopi, Jadi Aplikasi</h2>
 		<div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 			<div class="p-6 bg-[#783300] rounded shadow">
 				<div class="flex items-center">
