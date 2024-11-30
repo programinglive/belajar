@@ -1,11 +1,11 @@
 <!-- Footer -->
-<footer class="bg-gray-900 text-gray-400 py-6">
+<footer class="bg-[#964B00] text-[#F7F7F7] py-6">
 	<div class="container mx-auto px-6 flex flex-col items-center space-y-4">
 		<p>&copy; 2024 ProgramingLive. All rights reserved.</p>
 		<div class="space-x-4">
-			<a href="#" class="hover:text-white">Privacy Policy</a>
-			<a href="#" class="hover:text-white">Terms of Service</a>
-			<a href="#" class="hover:text-white">Contact Us</a>
+			<a href="{{ route('privacy-policy') }}" class="hover:text-[#783300]">Privacy Policy</a>
+			<a href="#" class="hover:text-[#783300]">Terms of Service</a>
+			<a href="{{ route('contact-us') }}" class="hover:text-[#783300]">Contact Us</a>
 		</div>
 	</div>
 </footer>

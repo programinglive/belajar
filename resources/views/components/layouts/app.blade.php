@@ -30,11 +30,14 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1286203107102917"
             crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body  class="bg-[#f4ede4] text-[#4b3621] font-serif">
+    <livewire:navbar />
+  
     <main>
         {{$slot}}
     </main>
     
+    <livewire:footer />
     @livewireScripts
     @stack('scripts')
   </body>
