@@ -8,7 +8,7 @@
 		</p>
 		<div class="mt-6 flex flex-col sm:flex-row items-center gap-4">
 			<button class="bg-white text-[#783300] px-6 py-3 rounded font-bold hover:bg-gray-200 w-full sm:w-auto">
-				Mulai Sekarang
+				Gabung Sekarang
 			</button>
 			<button class="bg-transparent border border-white px-6 py-3 rounded text-white hover:bg-white hover:text-[#783300] w-full sm:w-auto">
 				Selengkapnya
