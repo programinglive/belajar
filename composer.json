@@ -12,6 +12,7 @@
         "laravel/socialite": "^5.10",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0",
+        "sentry/sentry-laravel": "^4.10",
         "spatie/laravel-permission": "^6.1",
         "tymon/jwt-auth": "^2.0"
     },
