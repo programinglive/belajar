@@ -5,6 +5,7 @@ use App\Http\Controllers\SendMailController;
 use App\Http\Controllers\UserController;
 use App\Livewire\CartPage;
 use App\Livewire\Counter;
+use App\Livewire\Home;
 use App\Livewire\ModalLivewireTigaPage;
 use App\Livewire\ProductPage;
 use App\Livewire\RegionSelector;
@@ -13,7 +14,7 @@ use App\Livewire\UserPage;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function(){ return 'hello'; })->name('home');
+Route::get('/', Home::class)->name('home');
 
 Route::get('/phpinfo', function(){
     return phpinfo();
@@ -72,7 +73,6 @@ Route::get('/modalLivewireTiga', ModalLivewireTigaPage::class)->name('modalLivew
  */
 
 Route::get('/regionSelector', RegionSelector::class)->name('regionSelector');
-
 
 
 Route::get('okay', function(){
