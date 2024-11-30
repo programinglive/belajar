@@ -4,7 +4,7 @@
 		<p>&copy; 2024 ProgramingLive. All rights reserved.</p>
 		<div class="space-x-4">
 			<a href="{{ route('privacy-policy') }}" class="hover:text-[#783300]">Privacy Policy</a>
-			<a href="#" class="hover:text-[#783300]">Terms of Service</a>
+			<a href="{{ route('terms-of-service') }}" class="hover:text-[#783300]">Terms of Service</a>
 			<a href="{{ route('contact-us') }}" class="hover:text-[#783300]">Contact Us</a>
 		</div>
 	</div>

@@ -11,6 +11,7 @@ use App\Livewire\ModalLivewireTigaPage;
 use App\Livewire\PrivacyPolicy;
 use App\Livewire\ProductPage;
 use App\Livewire\RegionSelector;
+use App\Livewire\TermsOfService;
 use App\Livewire\UploadPage;
 use App\Livewire\UserPage;
 use App\Models\User;
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', Home::class)->name('home');
 Route::get('/privacy-policy', PrivacyPolicy::class)->name('privacy-policy');
 Route::get('/contact-us', ContactUs::class)->name('contact-us');
+Route::get('/terms-of-service', TermsOfService::class)->name('terms-of-service');
 
 Route::get('/phpinfo', function(){
     return phpinfo();
