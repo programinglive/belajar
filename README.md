@@ -25,15 +25,13 @@ Repository ini adalah repository open source yang diperuntukan untuk kalian yang
 ## How To Use
 
 - composer install
-- php artisan migrate:fresh --seed
-- php artisan tinker
-- php artisan livewire:publish --config
-- php artisan livewire:publish --pagination
 - npm install
-- npm run build
-- npm run dev
+- cp .env.example .env
+- php artisan key:generate
+- php artisan migrate:fresh --seed
+- composer run dev
 
-```
+```php
 User::factory(5)->create()
 ```
 
@@ -41,6 +39,9 @@ you're all set
 
 ## Built With
 
-- Laravel v10
-- Livewire v3
+- Laravel v12.x
+- Inertia.js v2
+- React v19
+- Tailwind CSS v4
+- shadcn/ui
 

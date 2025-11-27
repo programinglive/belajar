@@ -1,16 +1,93 @@
 {
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build"
-    },
-    "devDependencies": {
-        "autoprefixer": "^10.4.20",
-        "axios": "^1.1.2",
-        "laravel-vite-plugin": "^0.8.0",
-        "postcss": "^8.4.49",
-        "tailwindcss": "^3.4.15",
-        "vite": "^4.0.0"
-    }
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "echo \"No tests specified\"",
+    "prepare": "husky",
+    "release": "node scripts/release.cjs",
+    "release:major": "node scripts/release.cjs major",
+    "release:minor": "node scripts/release.cjs minor",
+    "release:patch": "node scripts/release.cjs patch"
+  },
+  "dependencies": {
+    "@inertiajs/react": "^2.0.0",
+    "@programinglive/commiter": "^1.2.3",
+    "@radix-ui/react-slot": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@inertiajs/react": "^2.0.0",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.9",
+    "concurrently": "^9.2.1",
+    "husky": "^9.1.7",
+    "laravel-vite-plugin": "^1.1.1",
+    "postcss": "^8.4.49",
+    "standard-version": "^9.5.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "standard-version": {
+    "releaseCommitMessageFormat": "chore(release): {{currentTag}} 🚀",
+    "types": [
+      {
+        "type": "feat",
+        "section": "✨ Features"
+      },
+      {
+        "type": "fix",
+        "section": "🐛 Bug Fixes"
+      },
+      {
+        "type": "perf",
+        "section": "⚡ Performance"
+      },
+      {
+        "type": "refactor",
+        "section": "♻️ Refactors"
+      },
+      {
+        "type": "docs",
+        "section": "📝 Documentation"
+      },
+      {
+        "type": "style",
+        "section": "💄 Styles"
+      },
+      {
+        "type": "test",
+        "section": "✅ Tests"
+      },
+      {
+        "type": "build",
+        "section": "🏗️ Build System"
+      },
+      {
+        "type": "ci",
+        "section": "👷 Continuous Integration"
+      },
+      {
+        "type": "chore",
+        "section": "🧹 Chores"
+      },
+      {
+        "type": "revert",
+        "section": "⏪ Reverts"
+      }
+    ]
+  }
 }
