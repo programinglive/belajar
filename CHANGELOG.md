@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/programinglive/belajar/compare/v0.0.1...v0.0.2) (2025-12-05)
+
+
+### 🐛 Bug Fixes
+
+* **build:** move dependencies to dependencies ([9224e3b](https://github.com/programinglive/belajar/commit/9224e3b82820a1b291d20b63efd19e339cd7fe29))
+
 ### 0.0.1 (2025-12-05)
 
 
