@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "test": "echo \"No tests specified\"",
-    "prepare": "husky",
+    "prepare": "husky || echo \"Husky not installed\"",
     "release": "node scripts/release.cjs",
     "release:major": "node scripts/release.cjs major",
     "release:minor": "node scripts/release.cjs minor",
@@ -90,5 +90,6 @@
         "section": "⏪ Reverts"
       }
     ]
-  }
+  },
+  "version": "0.0.0"
 }
