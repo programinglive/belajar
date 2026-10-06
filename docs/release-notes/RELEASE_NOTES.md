@@ -2,6 +2,7 @@
 
 | Version | Release Date | Highlight |
 |---------|--------------|-----------|
+| 0.0.10 | 2026-10-06 | update release notes for v0.0.9 (b9853f6) |
 | 0.0.9 | 2026-10-06 | update release notes for v0.0.8 (f1daac0) |
 | 0.0.8 | 2026-10-06 | update release notes for v0.0.7 (a0d74c7) |
 | 0.0.7 | 2026-10-06 | update release notes for v0.0.6 (88835c4) |
@@ -14,6 +15,14 @@
 
 
 
+
+
+## 0.0.10 – 📝 Documentation
+
+Released on **2026-10-06**.
+
+- update release notes for v0.0.9 (b9853f6)
+- implement consented progress tracking and capstone persistence (5549de3)
 
 ## 0.0.9 – 📝 Documentation
 
