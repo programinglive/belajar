@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/programinglive/belajar/compare/v0.0.4...v0.0.5) (2026-10-06)
+
+
+### 🧹 Chores
+
+* update release notes ([8fbb566](https://github.com/programinglive/belajar/commit/8fbb5667c518e34d943dc78161617b0e86fe3280))
+
+
+### 👷 Continuous Integration
+
+* add GitHub Actions verification workflow ([d59cb5c](https://github.com/programinglive/belajar/commit/d59cb5c56fc9d7d0d6993a7f20963eb97f6bd9b5))
+
+
+### 📝 Documentation
+
+* add Belajar production deployment runbook ([e40d4a9](https://github.com/programinglive/belajar/commit/e40d4a97366600debd8b9d2c9592162aa5bc9c91))
+* document release command and CI gate ([0d35165](https://github.com/programinglive/belajar/commit/0d3516534ab9634893ce3f1de58deacb6c9f320d))
+
+
+### ✨ Features
+
+* add first lesson preview ([337def8](https://github.com/programinglive/belajar/commit/337def810a674a259f084bb2117f9dd3578d5cdf))
+
+
+### 🐛 Bug Fixes
+
+* align Inertia page paths for Linux ([8c4de46](https://github.com/programinglive/belajar/commit/8c4de4668183b3e90d465e941b519146220cc10a))
+* build Vite assets before Laravel tests ([b363d74](https://github.com/programinglive/belajar/commit/b363d743c831352d68f66a24ecf9ce53560735cb))
+* prevent TypeScript build output in source tree ([08a75cf](https://github.com/programinglive/belajar/commit/08a75cf43f797f49556ef1c882e2e4476ef484fd))
+
 ### [0.0.4](https://github.com/programinglive/belajar/compare/v0.0.3...v0.0.4) (2025-12-05)
 
 
