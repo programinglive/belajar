@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/programinglive/belajar/compare/v0.0.9...v0.0.10) (2026-10-06)
+
+
+### 📝 Documentation
+
+* update release notes for v0.0.9 ([b9853f6](https://github.com/programinglive/belajar/commit/b9853f6db7308cfc63f2c1d23148084ffd1f455f))
+
+
+### ✨ Features
+
+* implement consented progress tracking and capstone persistence ([5549de3](https://github.com/programinglive/belajar/commit/5549de359feb05c8e16ace515c5d639d51eface6))
+
 ### [0.0.9](https://github.com/programinglive/belajar/compare/v0.0.8...v0.0.9) (2026-10-06)
 
 
