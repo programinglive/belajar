@@ -2,12 +2,21 @@
 
 | Version | Release Date | Highlight |
 |---------|--------------|-----------|
+| 0.0.7 | 2026-10-06 | update release notes for v0.0.6 (88835c4) |
 | 0.0.6 | 2026-10-06 | update release notes for v0.0.5 (481f178) |
 | 0.0.5 | 2026-10-06 | update release notes (8fbb566) |
 | 0.0.4 | 2025-12-05 | **docs:** create empty release notes with header (1982997) |
 
 
 
+
+
+## 0.0.7 – 📝 Documentation
+
+Released on **2026-10-06**.
+
+- update release notes for v0.0.6 (88835c4)
+- add production pilot API journey (4097f3f)
 
 ## 0.0.6 – 📝 Documentation
 
