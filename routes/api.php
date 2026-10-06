@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LearningTrackProgressController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,10 @@ Route::group([
     });
 
 });
+
+Route::get('/learning-tracks/{track}/progress', [LearningTrackProgressController::class, 'show']);
+Route::post('/learning-tracks/{track}/progress', [LearningTrackProgressController::class, 'store']);
+Route::delete('/learning-tracks/{track}/progress', [LearningTrackProgressController::class, 'destroy']);
 
 Route::get('/learning-tracks/first-web-page', function () {
     $package = json_decode(file_get_contents(base_path('package.json')), true);

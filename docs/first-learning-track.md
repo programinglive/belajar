@@ -32,4 +32,8 @@ Build a one-page personal profile with a short introduction, at least two conten
 
 ## Release status
 
-The first release is published at `/learn/first-web-page` with four lessons, labs, downloadable starter files, a completed example, and a capstone checklist. It remains free to use without an account and does not collect progress data.
+The first release is published at `/learn/first-web-page` with four lessons, labs, downloadable starter files, a completed example, and an interactive capstone checklist with browser persistence.
+
+Consented progress tracking is available via `/api/learning-tracks/first-web-page/progress`:
+- Guests can complete lessons and self-checks with zero tracking, storing marks solely in local browser memory.
+- Authenticated learners who grant explicit opt-in consent can securely record useful progress signals (completed lesson numbers and capstone completion/notes) and revoke consent at any time.
