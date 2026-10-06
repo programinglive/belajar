@@ -12,9 +12,9 @@ The Belajar pilot user:
 4. checks all learner-facing starter and example resources;
 5. logs out and invalidates the token.
 
-`tests/Feature/PilotUserJourneyTest.php` runs this journey against an isolated database on every CI run. `scripts/pilot-api-smoke.cjs` runs the same behavior against production after a successful version-tag CI run and once per day.
+`tests/Feature/PilotUserJourneyTest.php` runs this journey against an isolated database on every CI run. Production checks combine `scripts/pilot-api-smoke.cjs` with a Playwright Chromium journey that clicks through the homepage, course, example, and sign-in UI like a learner. They run after a successful version-tag CI run and once per day.
 
-Production credentials live only in GitHub Actions secrets named `BELAJAR_PILOT_EMAIL` and `BELAJAR_PILOT_PASSWORD`. They must never be committed or printed in logs.
+Production credentials live only in GitHub Actions secrets named `BELAJAR_PILOT_EMAIL` and `BELAJAR_PILOT_PASSWORD`. Results are posted by the `ProgramingLive Pilot Tester` Discord bot through `DISCORD_PILOT_WEBHOOK_URL`. These values must never be committed or printed in logs.
 
 ## Extending the journey
 

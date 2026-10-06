@@ -2,7 +2,9 @@
 
 namespace Tests\Feature;
 
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
 class PilotUserJourneyTest extends TestCase
@@ -64,5 +66,20 @@ class PilotUserJourneyTest extends TestCase
         $this->withToken($token)
             ->getJson('/api/auth/me')
             ->assertUnauthorized();
+    }
+
+    public function test_pilot_user_can_sign_in_through_the_browser_flow(): void
+    {
+        $user = User::factory()->create([
+            'email' => 'browser-pilot@example.com',
+            'password' => Hash::make('pilot-password'),
+        ]);
+
+        $this->post('/login', [
+            'email' => $user->email,
+            'password' => 'pilot-password',
+        ])->assertRedirect('/');
+
+        $this->assertAuthenticatedAs($user);
     }
 }

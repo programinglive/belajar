@@ -26,6 +26,13 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: '22'
+          cache: npm
+
+      - name: Install JavaScript dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
 
       - name: Check pilot configuration
         id: pilot
@@ -41,10 +48,36 @@ jobs:
             echo "::notice::Production pilot skipped because pilot credentials are not configured."
           fi
 
-      - name: Run production pilot journey
+      - name: Run production API journey
+        id: api
         if: steps.pilot.outputs.configured == 'true'
+        continue-on-error: true
         run: node scripts/pilot-api-smoke.cjs
         env:
           PILOT_API_BASE_URL: https://belajar.programinglive.com
           BELAJAR_PILOT_EMAIL: ${{ secrets.BELAJAR_PILOT_EMAIL }}
           BELAJAR_PILOT_PASSWORD: ${{ secrets.BELAJAR_PILOT_PASSWORD }}
+
+      - name: Run production browser journey
+        id: browser
+        if: steps.pilot.outputs.configured == 'true'
+        continue-on-error: true
+        run: node scripts/pilot-browser-smoke.cjs
+        env:
+          PILOT_WEB_BASE_URL: https://belajar.programinglive.com
+          BELAJAR_PILOT_EMAIL: ${{ secrets.BELAJAR_PILOT_EMAIL }}
+          BELAJAR_PILOT_PASSWORD: ${{ secrets.BELAJAR_PILOT_PASSWORD }}
+
+      - name: Report result to Discord
+        if: always() && steps.pilot.outputs.configured == 'true'
+        run: node scripts/post-pilot-result.cjs
+        env:
+          DISCORD_PILOT_WEBHOOK_URL: ${{ secrets.DISCORD_PILOT_WEBHOOK_URL }}
+          PILOT_API_RESULT: ${{ steps.api.outcome }}
+          PILOT_BROWSER_RESULT: ${{ steps.browser.outcome }}
+
+      - name: Enforce pilot result
+        if: >-
+          always() && steps.pilot.outputs.configured == 'true' &&
+          (steps.api.outcome != 'success' || steps.browser.outcome != 'success')
+        run: exit 1
