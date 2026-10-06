@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/programinglive/belajar/compare/v0.0.5...v0.0.6) (2026-10-06)
+
+
+### 📝 Documentation
+
+* update release notes for v0.0.5 ([481f178](https://github.com/programinglive/belajar/commit/481f178d59577f0e7cc26aac373f7cda9620cd77))
+
+
+### ✨ Features
+
+* publish first beginner learning track ([71207ce](https://github.com/programinglive/belajar/commit/71207cef6fa6d46353a47ddc9d5242d978112509))
+
 ### [0.0.5](https://github.com/programinglive/belajar/compare/v0.0.4...v0.0.5) (2026-10-06)
 
 
