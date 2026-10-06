@@ -54,6 +54,7 @@ class PilotUserJourneyTest extends TestCase
                 'lesson_count' => 4,
                 'has_capstone' => true,
             ])
+            ->assertJsonPath('version', json_decode(file_get_contents(base_path('package.json')), true)['version'])
             ->assertJsonCount(4, 'lessons')
             ->assertJsonStructure([
                 'resources' => ['track', 'starter_html', 'starter_css', 'completed_example', 'help'],

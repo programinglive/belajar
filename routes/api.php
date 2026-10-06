@@ -37,7 +37,10 @@ Route::group([
 });
 
 Route::get('/learning-tracks/first-web-page', function () {
+    $package = json_decode(file_get_contents(base_path('package.json')), true);
+
     return response()->json([
+        'version' => $package['version'] ?? null,
         'slug' => 'first-web-page',
         'title' => 'Build a simple personal webpage',
         'status' => 'published',

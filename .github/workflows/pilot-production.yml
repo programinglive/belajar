@@ -55,6 +55,7 @@ jobs:
         run: node scripts/pilot-api-smoke.cjs
         env:
           PILOT_API_BASE_URL: https://belajar.programinglive.com
+          PILOT_EXPECTED_VERSION: ${{ github.event.workflow_run.head_branch }}
           BELAJAR_PILOT_EMAIL: ${{ secrets.BELAJAR_PILOT_EMAIL }}
           BELAJAR_PILOT_PASSWORD: ${{ secrets.BELAJAR_PILOT_PASSWORD }}
 
@@ -77,7 +78,11 @@ jobs:
           PILOT_BROWSER_RESULT: ${{ steps.browser.outcome }}
 
       - name: Enforce pilot result
-        if: >-
-          always() && steps.pilot.outputs.configured == 'true' &&
-          (steps.api.outcome != 'success' || steps.browser.outcome != 'success')
-        run: exit 1
+        if: always() && steps.pilot.outputs.configured == 'true'
+        env:
+          PILOT_API_RESULT: ${{ steps.api.outcome }}
+          PILOT_BROWSER_RESULT: ${{ steps.browser.outcome }}
+        run: |
+          if [[ "$PILOT_API_RESULT" != "success" || "$PILOT_BROWSER_RESULT" != "success" ]]; then
+            exit 1
+          fi

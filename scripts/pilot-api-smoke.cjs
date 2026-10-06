@@ -1,6 +1,7 @@
 const baseUrl = (process.env.PILOT_API_BASE_URL || 'https://belajar.programinglive.com').replace(/\/$/, '')
 const email = process.env.BELAJAR_PILOT_EMAIL
 const password = process.env.BELAJAR_PILOT_PASSWORD
+const expectedVersion = (process.env.PILOT_EXPECTED_VERSION || '').replace(/^v/, '')
 
 if (!email || !password) {
   throw new Error('BELAJAR_PILOT_EMAIL and BELAJAR_PILOT_PASSWORD are required')
@@ -31,12 +32,13 @@ async function request(path, options = {}) {
 async function waitForTrack() {
   for (let attempt = 1; attempt <= 20; attempt += 1) {
     const result = await request('/api/learning-tracks/first-web-page')
-    if (result.response.ok && result.json?.status === 'published') {
+    const expectedVersionIsLive = !expectedVersion || result.json?.version === expectedVersion
+    if (result.response.ok && result.json?.status === 'published' && expectedVersionIsLive) {
       return result.json
     }
 
     if (attempt === 20) {
-      throw new Error(`Learning-track API did not become ready (HTTP ${result.response.status})`)
+      throw new Error(`Release ${expectedVersion || 'current'} did not become ready (HTTP ${result.response.status})`)
     }
 
     console.log(`Waiting for production deployment (${attempt}/20)...`)
