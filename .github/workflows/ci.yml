@@ -55,8 +55,8 @@ jobs:
       - name: Install JavaScript dependencies
         run: npm ci
 
-      - name: Run Laravel tests
-        run: composer test
-
       - name: Build frontend assets
         run: npm run build
+
+      - name: Run Laravel tests
+        run: composer test
