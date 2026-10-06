@@ -10,7 +10,7 @@
 ## Release and deployment flow
 
 1. Run the project checks and build locally or in GitHub Actions.
-2. Publish a version tag (`v*`) to `programinglive/belajar` after CI passes.
+2. Wait for the latest `master` CI run to pass, then create/publish a patch release with `npm run release:patch` (or the corresponding `release:minor` / `release:major` command). This creates the `v*` tag consumed by the server poller.
 3. A root cron job on `bw-server` runs `/root/command/deploy_all.sh` every five minutes. The script fetches tags and deploys the newest tag for each configured project; Belajar is configured as `/usr/share/nginx/belajar` with the project key `belajar`.
 4. Deployment builds in `/tmp/deploy_build_belajar`, syncs the release back while preserving `.env` and `storage`, runs Laravel migrations, and refreshes Laravel caches.
 
@@ -31,6 +31,6 @@ gcloud compute ssh gpcbeautyworld@bw-server --project=winged-ratio-344917 --zone
 ## Operational notes
 
 - Deployment is tag-driven, not branch-driven. A push to `master` alone does not deploy.
-- The server polls tags every five minutes; CI and the server poller are not currently coupled, so only publish a release tag after its GitHub Actions run succeeds.
+- The server polls tags every five minutes; CI and the server poller are not currently coupled. Ensure CI on the release commit's `master` code has passed before running the release command.
 - `.env` and `storage` are excluded from the code sync. Database migrations do run with `--force` on deployment.
 - Production changes should be followed by an HTTP smoke test and a check that the deployed tag matches the release.
