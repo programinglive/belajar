@@ -46,4 +46,14 @@ class LandingPageTest extends TestCase
             ->component('Auth/Register')
         );
     }
+
+    public function test_first_lesson_preview_is_accessible_without_an_account(): void
+    {
+        $response = $this->get('/learn/first-web-page');
+
+        $response->assertStatus(200);
+        $response->assertInertia(fn (AssertableInertia $page) => $page
+            ->component('Courses/FirstWebPage')
+        );
+    }
 }
