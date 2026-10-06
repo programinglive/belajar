@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/programinglive/belajar/compare/v0.0.6...v0.0.7) (2026-10-06)
+
+
+### 📝 Documentation
+
+* update release notes for v0.0.6 ([88835c4](https://github.com/programinglive/belajar/commit/88835c40815fc9344561c44d65ecbbb08603b1fc))
+
+
+### ✨ Features
+
+* add production pilot API journey ([4097f3f](https://github.com/programinglive/belajar/commit/4097f3fe45dcc231163e0adfa645247ad28bd5d8))
+
 ### [0.0.6](https://github.com/programinglive/belajar/compare/v0.0.5...v0.0.6) (2026-10-06)
 
 
