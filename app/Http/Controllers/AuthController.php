@@ -2,10 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\Password;
 
 class AuthController extends Controller
 {
+    /**
+     * Register a user and return a JWT for API journeys.
+     */
+    public function register(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email'],
+            'password' => ['required', 'confirmed', Password::min(8)],
+        ]);
+
+        $user = User::create($validated);
+        $token = auth('api')->login($user);
+
+        return $this->respondWithToken($token, 201);
+    }
 
     /**
      * Get a JWT via given credentials.
@@ -30,12 +48,7 @@ class AuthController extends Controller
      */
     public function me()
     {
-        if(!auth('api')->user()->can('helloworld')){
-            return response()->json(auth('api')->user());
-        } else {
-
-            return response()->json('forbidden', 403);
-        }
+        return response()->json(auth('api')->user());
     }
 
     /**
@@ -45,7 +58,7 @@ class AuthController extends Controller
      */
     public function logout()
     {
-        auth()->logout();
+        auth('api')->logout();
 
         return response()->json(['message' => 'Successfully logged out']);
     }
@@ -57,7 +70,7 @@ class AuthController extends Controller
      */
     public function refresh()
     {
-        return $this->respondWithToken(auth()->refresh());
+        return $this->respondWithToken(auth('api')->refresh());
     }
 
     /**
@@ -67,13 +80,12 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    protected function respondWithToken($token)
+    protected function respondWithToken($token, int $status = 200)
     {
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',
             'expires_in' => auth('api')->factory()->getTTL() * 60,
-            'token' => $token
-        ]);
+        ], $status);
     }
 }

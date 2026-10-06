@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "test": "php artisan test",
+    "pilot:production": "node scripts/pilot-api-smoke.cjs",
     "prepare": "husky || echo \"Husky not installed\"",
     "release": "node scripts/release.cjs",
     "release:major": "node scripts/release.cjs major",

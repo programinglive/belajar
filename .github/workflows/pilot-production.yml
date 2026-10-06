@@ -1,0 +1,50 @@
+name: Belajar production pilot
+
+on:
+  workflow_run:
+    workflows: [Belajar CI]
+    types: [completed]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 1 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  pilot:
+    name: Complete production API journey
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' && startsWith(github.event.workflow_run.head_branch, 'v'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Check pilot configuration
+        id: pilot
+        shell: bash
+        env:
+          BELAJAR_PILOT_EMAIL: ${{ secrets.BELAJAR_PILOT_EMAIL }}
+          BELAJAR_PILOT_PASSWORD: ${{ secrets.BELAJAR_PILOT_PASSWORD }}
+        run: |
+          if [[ -n "$BELAJAR_PILOT_EMAIL" && -n "$BELAJAR_PILOT_PASSWORD" ]]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Production pilot skipped because pilot credentials are not configured."
+          fi
+
+      - name: Run production pilot journey
+        if: steps.pilot.outputs.configured == 'true'
+        run: node scripts/pilot-api-smoke.cjs
+        env:
+          PILOT_API_BASE_URL: https://belajar.programinglive.com
+          BELAJAR_PILOT_EMAIL: ${{ secrets.BELAJAR_PILOT_EMAIL }}
+          BELAJAR_PILOT_PASSWORD: ${{ secrets.BELAJAR_PILOT_PASSWORD }}
