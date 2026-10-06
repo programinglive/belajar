@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/programinglive/belajar/compare/v0.0.7...v0.0.8) (2026-10-06)
+
+
+### 📝 Documentation
+
+* update release notes for v0.0.7 ([a0d74c7](https://github.com/programinglive/belajar/commit/a0d74c7eb5e5177e8d378b36d451a79bebe48921))
+
+
+### ✨ Features
+
+* report browser pilot results to Discord ([08260df](https://github.com/programinglive/belajar/commit/08260df58ea933f3fc733f73437ea66a67d69585))
+
 ### [0.0.7](https://github.com/programinglive/belajar/compare/v0.0.6...v0.0.7) (2026-10-06)
 
 
