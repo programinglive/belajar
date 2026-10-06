@@ -47,7 +47,7 @@ class LandingPageTest extends TestCase
         );
     }
 
-    public function test_first_lesson_preview_is_accessible_without_an_account(): void
+    public function test_first_learning_track_is_accessible_without_an_account(): void
     {
         $response = $this->get('/learn/first-web-page');
 
@@ -55,5 +55,13 @@ class LandingPageTest extends TestCase
         $response->assertInertia(fn (AssertableInertia $page) => $page
             ->component('Courses/FirstWebPage')
         );
+    }
+
+    public function test_first_learning_track_starter_files_are_published(): void
+    {
+        $this->assertFileExists(public_path('learn/personal-page/starter/index.html'));
+        $this->assertFileExists(public_path('learn/personal-page/starter/styles.css'));
+        $this->assertFileExists(public_path('learn/personal-page/example/index.html'));
+        $this->assertFileExists(public_path('learn/personal-page/example/styles.css'));
     }
 }

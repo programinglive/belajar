@@ -23,13 +23,13 @@ Build a one-page personal profile with a short introduction, at least two conten
 - content remains readable without horizontal scrolling at 375px and 1280px viewport widths;
 - the learner can explain one change they made after using the review checklist.
 
-## Starter files and checks to prepare
+## Starter files and checks
 
-- Provide a minimal `index.html` and `styles.css`, plus a completed example and a blank starter variant.
-- Each lesson should state prerequisites, the expected result, and a self-check before introducing new concepts.
+- A minimal `index.html` and `styles.css`, plus a completed example, are available from the learning-track page.
+- Each lesson states prerequisites, the expected result, and a self-check before introducing new concepts.
 - Keep this track free to read and runnable locally; do not require an account or collect learner progress for the first release.
 - Validate clarity with a small beginner pilot before publishing the track as available.
 
 ## Release status
 
-This document is a curriculum draft. A static preview of lesson 1 is available at `/learn/first-web-page`; the remaining lessons, starter files, and full course experience are not published yet.
+The first release is published at `/learn/first-web-page` with four lessons, labs, downloadable starter files, a completed example, and a capstone checklist. It remains free to use without an account and does not collect progress data.

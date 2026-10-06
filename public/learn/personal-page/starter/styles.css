@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background: #eff6ff;
+  color: #172033;
+}
+
+main {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 16px;
+  background: white;
+}
+
+a { color: #1d4ed8; }
+
+a:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  body { padding: 64px; }
+  main { padding: 48px; }
+}

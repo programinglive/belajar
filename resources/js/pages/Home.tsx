@@ -31,7 +31,7 @@ export default function Home() {
                     <div className="text-center">
                         <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-sm font-medium mb-8">
                             <span className="mr-2">✨</span>
-                            Early prototype · learning features in development
+                            Free beginner learning track now available
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                             Learn Together,
@@ -42,12 +42,12 @@ export default function Home() {
                         </h1>
                         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                             Belajar is a ProgramingLive project to make programming education more accessible and collaborative.
-                            The first lesson preview is available. Full courses, progress tracking, and community features are not available yet.
+                            Start with a complete four-lesson beginner track, practical labs, starter files, and a capstone project. Progress tracking and community features are not available yet.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/learn/first-web-page">
                                 <Button size="lg" className="text-lg px-8 bg-white text-blue-700 hover:bg-blue-50">
-                                    Preview the First Lesson
+                                    Start the Free Track
                                 </Button>
                             </Link>
                             <Link href="/register">
@@ -146,7 +146,7 @@ export default function Home() {
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">First Learning Track</h3>
                                 <p className="text-gray-600">
-                                    The full course catalog is being prepared. Preview the first lesson now.
+                                    The first complete beginner track is available free without an account.
                                 </p>
                             </div>
 
