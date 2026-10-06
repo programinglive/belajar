@@ -2,6 +2,7 @@
 
 | Version | Release Date | Highlight |
 |---------|--------------|-----------|
+| 0.0.8 | 2026-10-06 | update release notes for v0.0.7 (a0d74c7) |
 | 0.0.7 | 2026-10-06 | update release notes for v0.0.6 (88835c4) |
 | 0.0.6 | 2026-10-06 | update release notes for v0.0.5 (481f178) |
 | 0.0.5 | 2026-10-06 | update release notes (8fbb566) |
@@ -10,6 +11,14 @@
 
 
 
+
+
+## 0.0.8 – 📝 Documentation
+
+Released on **2026-10-06**.
+
+- update release notes for v0.0.7 (a0d74c7)
+- report browser pilot results to Discord (08260df)
 
 ## 0.0.7 – 📝 Documentation
 
