@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/programinglive/belajar/compare/v0.0.8...v0.0.9) (2026-10-06)
+
+
+### 📝 Documentation
+
+* update release notes for v0.0.8 ([f1daac0](https://github.com/programinglive/belajar/commit/f1daac05f214c6645c5b367d07d81b61bf191cac))
+
+
+### 🐛 Bug Fixes
+
+* gate pilot on deployed release ([aeb1d3f](https://github.com/programinglive/belajar/commit/aeb1d3f5d8652b650e22e4f8a2a8110cc24baffb))
+
 ### [0.0.8](https://github.com/programinglive/belajar/compare/v0.0.7...v0.0.8) (2026-10-06)
 
 
