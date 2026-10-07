@@ -67,3 +67,34 @@ Route::get('/learning-tracks/first-web-page', function () {
         ],
     ]);
 })->name('api.learning-tracks.first-web-page');
+
+Route::get('/learning-tracks/javascript-logic-dom', function () {
+    $package = json_decode(file_get_contents(base_path('package.json')), true);
+
+    return response()->json([
+        'version' => $package['version'] ?? null,
+        'slug' => 'javascript-logic-dom',
+        'title' => 'Dasar Logika JavaScript & DOM',
+        'status' => 'published',
+        'requires_account' => false,
+        'lesson_count' => 5,
+        'has_capstone' => true,
+        'lessons' => [
+            ['number' => 1, 'title' => 'Menghubungkan JavaScript & Mengenal Variabel'],
+            ['number' => 2, 'title' => 'Percabangan & Logika Kondisional'],
+            ['number' => 3, 'title' => 'Fungsi (Functions) & Operasi Aritmatika'],
+            ['number' => 4, 'title' => 'Seleksi Elemen DOM & Event Listener'],
+            ['number' => 5, 'title' => 'Proyek Capstone: Merakit Aplikasi Kalkulator'],
+        ],
+        'resources' => [
+            'track' => url('/learn/javascript-logic-dom'),
+            'starter_html' => url('/learn/javascript-logic/starter/index.html'),
+            'starter_css' => url('/learn/javascript-logic/starter/styles.css'),
+            'starter_js' => url('/learn/javascript-logic/starter/app.js'),
+            'example_html' => url('/learn/javascript-logic/example/index.html'),
+            'example_css' => url('/learn/javascript-logic/example/styles.css'),
+            'example_js' => url('/learn/javascript-logic/example/app.js'),
+            'help' => 'https://github.com/programinglive/belajar/discussions',
+        ],
+    ]);
+})->name('api.learning-tracks.javascript-logic-dom');

@@ -60,8 +60,8 @@ class TrackCatalogService
                 'lesson_count' => 5,
                 'has_capstone' => true,
                 'capstone_title' => 'Aplikasi Kalkulator Sederhana',
-                'status' => 'coming_soon',
-                'route' => null,
+                'status' => 'published',
+                'route' => '/learn/javascript-logic-dom',
                 'lessons' => [
                     ['number' => 1, 'title' => 'Variabel & Tipe Data'],
                     ['number' => 2, 'title' => 'Percabangan & Logika Kondisional'],

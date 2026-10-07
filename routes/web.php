@@ -16,3 +16,7 @@ Route::middleware('auth')->get('/dashboard', [DashboardController::class, 'index
 Route::get('/learn/first-web-page', function () {
     return Inertia::render('Courses/FirstWebPage');
 })->name('learn.first-web-page');
+
+Route::get('/learn/javascript-logic-dom', function () {
+    return Inertia::render('Courses/JavascriptLogicDom');
+})->name('learn.javascript-logic-dom');
