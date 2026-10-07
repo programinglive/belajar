@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TrackCatalogController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -9,6 +10,8 @@ Route::get('/', function () {
 });
 
 Route::get('/tracks', [TrackCatalogController::class, 'index'])->name('tracks.index');
+
+Route::middleware('auth')->get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::get('/learn/first-web-page', function () {
     return Inertia::render('Courses/FirstWebPage');
