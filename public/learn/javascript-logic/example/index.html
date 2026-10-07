@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana — Contoh Selesai (Capstone)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="calculator-card">
+        <div class="badge">Contoh Selesai Capstone</div>
+        <h1>Kalkulator Sederhana</h1>
+        <p class="subtitle">Dibangun dengan Vanilla JavaScript & Manipulasi DOM</p>
+
+        <div class="input-group">
+            <label for="angka1">Angka Pertama:</label>
+            <input type="number" id="angka1" placeholder="Masukkan angka pertama" value="12">
+        </div>
+
+        <div class="input-group">
+            <label for="angka2">Angka Kedua:</label>
+            <input type="number" id="angka2" placeholder="Masukkan angka kedua" value="4">
+        </div>
+
+        <div class="buttons-grid">
+            <button id="btn-tambah" class="btn btn-op" title="Penjumlahan">+</button>
+            <button id="btn-kurang" class="btn btn-op" title="Pengurangan">−</button>
+            <button id="btn-kali" class="btn btn-op" title="Perkalian">×</button>
+            <button id="btn-bagi" class="btn btn-op" title="Pembagian">÷</button>
+        </div>
+
+        <button id="btn-reset" class="btn btn-reset">Reset / Bersihkan</button>
+
+        <div class="result-box">
+            <span class="result-label">Hasil Perhitungan:</span>
+            <span id="hasil-teks" class="result-value">16</span>
+        </div>
+
+        <footer class="card-footer">
+            <p>Track 2 Capstone: ProgramingLive Belajar</p>
+        </footer>
+    </div>
+</body>
+</html>
