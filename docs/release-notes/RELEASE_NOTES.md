@@ -2,6 +2,7 @@
 
 | Version | Release Date | Highlight |
 |---------|--------------|-----------|
+| 0.0.13 | 2026-10-07 | update release notes for v0.0.12 (3776c71) |
 | 0.0.12 | 2026-10-07 | add implementation plan for javascript logic and dom track (29012ba) |
 | 0.0.11 | 2026-10-07 | add implementation plan for track catalog and dashboard (ffc8e77) |
 | 0.0.10 | 2026-10-06 | update release notes for v0.0.9 (b9853f6) |
@@ -20,6 +21,14 @@
 
 
 
+
+
+## 0.0.13 – 📝 Documentation
+
+Released on **2026-10-07**.
+
+- update release notes for v0.0.12 (3776c71)
+- **ui:** standardize global design system and brand identity across all pages (3f1bb5f)
 
 ## 0.0.12 – 📝 Documentation
 
