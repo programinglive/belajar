@@ -47,6 +47,17 @@ class LandingPageTest extends TestCase
         );
     }
 
+    public function test_learning_tracks_catalog_is_accessible_without_an_account(): void
+    {
+        $response = $this->get('/tracks');
+
+        $response->assertStatus(200);
+        $response->assertInertia(fn (AssertableInertia $page) => $page
+            ->component('Tracks/Index')
+            ->has('tracks')
+        );
+    }
+
     public function test_first_learning_track_is_accessible_without_an_account(): void
     {
         $response = $this->get('/learn/first-web-page');
