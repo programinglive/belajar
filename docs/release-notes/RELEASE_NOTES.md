@@ -2,6 +2,7 @@
 
 | Version | Release Date | Highlight |
 |---------|--------------|-----------|
+| 0.0.12 | 2026-10-07 | add implementation plan for javascript logic and dom track (29012ba) |
 | 0.0.11 | 2026-10-07 | add implementation plan for track catalog and dashboard (ffc8e77) |
 | 0.0.10 | 2026-10-06 | update release notes for v0.0.9 (b9853f6) |
 | 0.0.9 | 2026-10-06 | update release notes for v0.0.8 (f1daac0) |
@@ -18,6 +19,19 @@
 
 
 
+
+
+## 0.0.12 – 📝 Documentation
+
+Released on **2026-10-07**.
+
+- add implementation plan for javascript logic and dom track (29012ba)
+- add javascript logic and dom track architecture spec (f15c2ff)
+- update release notes for v0.0.11 (73cee9f)
+- add javascript track routes, manifest api, and update catalog status (313dc9d)
+- add starter files and working example for javascript logic track (97a4646)
+- implement javascript logic and dom interactive course view (ac65c01)
+- update TrackCatalogTest for published javascript track (a223df4)
 
 ## 0.0.11 – 📝 Documentation
 
