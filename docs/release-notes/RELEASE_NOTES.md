@@ -2,6 +2,7 @@
 
 | Version | Release Date | Highlight |
 |---------|--------------|-----------|
+| 0.0.11 | 2026-10-07 | add implementation plan for track catalog and dashboard (ffc8e77) |
 | 0.0.10 | 2026-10-06 | update release notes for v0.0.9 (b9853f6) |
 | 0.0.9 | 2026-10-06 | update release notes for v0.0.8 (f1daac0) |
 | 0.0.8 | 2026-10-06 | update release notes for v0.0.7 (a0d74c7) |
@@ -16,6 +17,21 @@
 
 
 
+
+
+## 0.0.11 – 📝 Documentation
+
+Released on **2026-10-07**.
+
+- add implementation plan for track catalog and dashboard (ffc8e77)
+- add track catalog and dashboard architecture spec (9048683)
+- update release notes for v0.0.10 (accc223)
+- add learner dashboard controller and configure fortify home redirect (a543327)
+- add track catalog backend service, controller, and feature tests (1e30c7d)
+- create unified responsive navigation bar with auth-aware links (abae6cf)
+- implement learner dashboard view with metrics, resume actions, and privacy controls (8c28cac)
+- implement public track catalog page with course cards and status badges (0f6f288)
+- add catalog regression test to LandingPageTest (b5c1436)
 
 ## 0.0.10 – 📝 Documentation
 
