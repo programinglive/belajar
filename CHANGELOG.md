@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/programinglive/belajar/compare/v0.0.11...v0.0.12) (2026-10-07)
+
+
+### 📝 Documentation
+
+* add implementation plan for javascript logic and dom track ([29012ba](https://github.com/programinglive/belajar/commit/29012ba8621e09d376cc23803b51b79eeca1556c))
+* add javascript logic and dom track architecture spec ([f15c2ff](https://github.com/programinglive/belajar/commit/f15c2ffc9f1965ae28c143eee504876ff0d873f1))
+* update release notes for v0.0.11 ([73cee9f](https://github.com/programinglive/belajar/commit/73cee9f22120cef430a9dea490232592a7f0c217))
+
+
+### ✨ Features
+
+* add javascript track routes, manifest api, and update catalog status ([313dc9d](https://github.com/programinglive/belajar/commit/313dc9d1dbc888b8e60ddc049b6cc76be39cb916))
+* add starter files and working example for javascript logic track ([97a4646](https://github.com/programinglive/belajar/commit/97a464640306a0ad37c479dd2576e1a69cabf962))
+* implement javascript logic and dom interactive course view ([ac65c01](https://github.com/programinglive/belajar/commit/ac65c01a1a68d11ca99535528257148e76335900))
+
+
+### ✅ Tests
+
+* update TrackCatalogTest for published javascript track ([a223df4](https://github.com/programinglive/belajar/commit/a223df478e47a00f0fec41ed9d4da99fb2d18c73))
+
 ### [0.0.11](https://github.com/programinglive/belajar/compare/v0.0.10...v0.0.11) (2026-10-07)
 
 
