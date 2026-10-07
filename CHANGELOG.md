@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/programinglive/belajar/compare/v0.0.10...v0.0.11) (2026-10-07)
+
+
+### 📝 Documentation
+
+* add implementation plan for track catalog and dashboard ([ffc8e77](https://github.com/programinglive/belajar/commit/ffc8e77900eeae07dde284efafc9ba42983e7d91))
+* add track catalog and dashboard architecture spec ([9048683](https://github.com/programinglive/belajar/commit/9048683a82fa7c3cd5e899d093e186e6e2f89f02))
+* update release notes for v0.0.10 ([accc223](https://github.com/programinglive/belajar/commit/accc22377b28aaba575f22397f9afbb66a14ea2e))
+
+
+### ✨ Features
+
+* add learner dashboard controller and configure fortify home redirect ([a543327](https://github.com/programinglive/belajar/commit/a5433270eeb85599e75ea3aa118cb65df8eac67c))
+* add track catalog backend service, controller, and feature tests ([1e30c7d](https://github.com/programinglive/belajar/commit/1e30c7d1b908d9a8b2b1cece4afd81ae7695fe94))
+* create unified responsive navigation bar with auth-aware links ([abae6cf](https://github.com/programinglive/belajar/commit/abae6cf5dfb45ee1e8cdb886f4580f6361ae0f54))
+* implement learner dashboard view with metrics, resume actions, and privacy controls ([8c28cac](https://github.com/programinglive/belajar/commit/8c28cacfa41911487f761d1e1696e71e5e90220b))
+* implement public track catalog page with course cards and status badges ([0f6f288](https://github.com/programinglive/belajar/commit/0f6f288ece8bdc0722584148aeb23554290a5370))
+
+
+### ✅ Tests
+
+* add catalog regression test to LandingPageTest ([b5c1436](https://github.com/programinglive/belajar/commit/b5c1436ac47cf855b817f0c7eea32ccfb3f8057f))
+
 ### [0.0.10](https://github.com/programinglive/belajar/compare/v0.0.9...v0.0.10) (2026-10-06)
 
 
