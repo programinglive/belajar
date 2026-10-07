@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
 import { Head, Link } from '@inertiajs/react';
 
@@ -5,62 +6,35 @@ export default function Home() {
     return (
         <>
             <Head title="Belajar - Social Learning Platform" />
-            <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-                {/* Navigation */}
-                <nav className="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex justify-between items-center h-16">
-                            <div className="flex items-center space-x-2">
-                                <img src="/images/logo.png" alt="Belajar Logo" className="h-8 w-auto" />
-                                <span className="text-2xl font-bold text-gray-900">Belajar</span>
-                            </div>
-                            <div className="flex items-center space-x-4">
-                                <Link href="/login">
-                                    <Button variant="ghost" className="bg-white hover:bg-gray-100">Sign In</Button>
-                                </Link>
-                                <Link href="/register">
-                                    <Button>Get Started</Button>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+            <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex flex-col">
+                <Navbar />
 
                 {/* Hero Section */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 flex-1">
                     <div className="text-center">
                         <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-sm font-medium mb-8">
                             <span className="mr-2">✨</span>
-                            Free beginner learning track now available
+                            Katalog Kursus Pemula & Pelacakan Progres Terbuka
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                            Learn Together,
+                            Belajar Bersama,
                             <br />
                             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                Grow Together
+                                Bertumbuh Bersama
                             </span>
                         </h1>
                         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                            Belajar is a ProgramingLive project to make programming education more accessible and collaborative.
-                            Start with a complete four-lesson beginner track, practical labs, starter files, and a capstone project. Progress tracking and community features are not available yet.
+                            Belajar adalah inisiatif ProgramingLive untuk menyediakan jalur pembelajaran pemrograman yang terstruktur, praktis, dan 100% terbuka tanpa paywall.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Link href="/tracks">
+                                <Button size="lg" className="text-lg px-8 bg-blue-600 text-white hover:bg-blue-700 shadow-md">
+                                    Jelajahi Katalog Kursus
+                                </Button>
+                            </Link>
                             <Link href="/learn/first-web-page">
-                                <Button size="lg" className="text-lg px-8 bg-white text-blue-700 hover:bg-blue-50">
-                                    Start the Free Track
-                                </Button>
-                            </Link>
-                            <Link href="/register">
-                                <Button size="lg" className="text-lg px-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0">
-                                    Create an Account
-                                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                    </svg>
-                                </Button>
-                            </Link>
-                            <Link href="/login">
-                                <Button size="lg" variant="ghost" className="text-lg px-8 bg-gray-900 text-white hover:bg-gray-800">
-                                    Sign In
+                                <Button size="lg" variant="outline" className="text-lg px-8 bg-white text-blue-700 hover:bg-blue-50">
+                                    Mulai Track Web Perdana
                                 </Button>
                             </Link>
                         </div>

@@ -79,7 +79,7 @@ class PilotUserJourneyTest extends TestCase
         $this->post('/login', [
             'email' => $user->email,
             'password' => 'pilot-password',
-        ])->assertRedirect('/');
+        ])->assertRedirect('/dashboard');
 
         $this->assertAuthenticatedAs($user);
     }
