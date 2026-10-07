@@ -1,206 +1,187 @@
 import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Head, Link } from '@inertiajs/react';
 
 export default function Home() {
     return (
-        <>
-            <Head title="Belajar - Social Learning Platform" />
-            <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex flex-col">
-                <Navbar />
+        <div className="min-h-screen bg-[#F8FAFC] flex flex-col text-[#0F172A] font-sans antialiased">
+            <Head title="Belajar — ProgramingLive Coding Platform" />
+            <Navbar />
 
-                {/* Hero Section */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 flex-1">
-                    <div className="text-center">
-                        <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-sm font-medium mb-8">
-                            <span className="mr-2">✨</span>
-                            Katalog Kursus Pemula & Pelacakan Progres Terbuka
-                        </div>
-                        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                            Belajar Bersama,
-                            <br />
-                            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                Bertumbuh Bersama
-                            </span>
-                        </h1>
-                        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                            Belajar adalah inisiatif ProgramingLive untuk menyediakan jalur pembelajaran pemrograman yang terstruktur, praktis, dan 100% terbuka tanpa paywall.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href="/tracks">
-                                <Button size="lg" className="text-lg px-8 bg-blue-600 text-white hover:bg-blue-700 shadow-md">
-                                    Jelajahi Katalog Kursus
-                                </Button>
-                            </Link>
-                            <Link href="/learn/first-web-page">
-                                <Button size="lg" variant="outline" className="text-lg px-8 bg-white text-blue-700 hover:bg-blue-50">
-                                    Mulai Track Web Perdana
-                                </Button>
-                            </Link>
-                        </div>
+            {/* Hero Section */}
+            <section className="bg-white border-b border-[#E2E8F0] py-20 lg:py-28">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#EFF6FF] text-[#1E3A8A] border border-[#BFDBFE] mb-8">
+                        <span className="w-2 h-2 rounded-full bg-[#2563EB]"></span>
+                        Platform Belajar Pemrograman Terstruktur & 100% Gratis
                     </div>
-                </div>
-
-                {/* Features Grid */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            What We're Building
-                        </h2>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            These are planned capabilities, not features available in the current prototype.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-blue-50 rounded-xl p-6 hover:shadow-xl transition-all hover:scale-105">
-                            <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Community Learning · Planned</h3>
-                            <p className="text-gray-600">
-                                A community space for questions, discussion, and sharing learning progress is planned.
-                            </p>
-                        </div>
-
-                        <div className="bg-purple-50 rounded-xl p-6 hover:shadow-xl transition-all hover:scale-105">
-                            <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Guided Courses · In Development</h3>
-                            <p className="text-gray-600">
-                                Beginner-friendly lessons, practical labs, and projects are the first learning experience to build.
-                            </p>
-                        </div>
-
-                        <div className="bg-green-50 rounded-xl p-6 hover:shadow-xl transition-all hover:scale-105">
-                            <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
-                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Learner Portfolio · Planned</h3>
-                            <p className="text-gray-600">
-                                Learner profiles and project showcases can help people demonstrate skills as the platform grows.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* How It Works */}
-                <div className="bg-gray-50 py-20">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                                Current Project Status
-                            </h2>
-                            <p className="text-lg text-gray-600">
-                                The platform is being built in small, testable steps.
-                            </p>
-                        </div>
-
-                        <div className="grid md:grid-cols-3 gap-8">
-                            <div className="text-center">
-                                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                                    1
-                                </div>
-                                <h3 className="text-xl font-semibold mb-2">Account Pages</h3>
-                                <p className="text-gray-600">
-                                    Registration and sign-in pages are available in the current prototype.
-                                </p>
-                            </div>
-
-                            <div className="text-center">
-                                <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                                    2
-                                </div>
-                                <h3 className="text-xl font-semibold mb-2">First Learning Track</h3>
-                                <p className="text-gray-600">
-                                    The first complete beginner track is available free without an account.
-                                </p>
-                            </div>
-
-                            <div className="text-center">
-                                <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                                    3
-                                </div>
-                                <h3 className="text-xl font-semibold mb-2">Community Features</h3>
-                                <p className="text-gray-600">
-                                    Progress sharing and the social feed are planned after the learning path is usable.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* CTA Section */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                            Follow the Project
-                        </h2>
-                        <p className="text-xl mb-8 opacity-90">
-                            Belajar is early in development. Create an account to explore the prototype while the first course experience is built.
-                        </p>
-                        <Link href="/register">
-                            <Button size="lg" variant="secondary" className="text-lg px-8">
-                                Create an Account
-                                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0F172A] tracking-tight mb-6 leading-tight max-w-4xl mx-auto">
+                        Belajar Coding Bertahap,{' '}
+                        <span className="text-[#2563EB]">Bangun Portofolio Nyata</span>
+                    </h1>
+                    <p className="text-lg sm:text-xl text-[#475569] mb-10 max-w-2xl mx-auto leading-relaxed">
+                        Inisiatif pendidikan teknologi dari ProgramingLive untuk menyediakan kurikulum praktis, berkas starter terbuka, dan proyek nyata tanpa biaya atau paywall.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <Link href="/tracks">
+                            <Button size="lg" className="w-full sm:w-auto bg-[#2563EB] hover:bg-[#1D4ED8] text-white">
+                                Jelajahi Katalog Kursus
+                            </Button>
+                        </Link>
+                        <Link href="/learn/first-web-page">
+                            <Button size="lg" variant="secondary" className="w-full sm:w-auto border-[#CBD5E1]">
+                                Mulai Track Web Pemula
                             </Button>
                         </Link>
                     </div>
                 </div>
+            </section>
 
-                {/* Footer */}
-                <footer className="bg-gray-50">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                        <div className="grid md:grid-cols-4 gap-8">
-                            <div>
-                                <div className="flex items-center space-x-2 mb-4">
-                                    <img src="/images/logo.png" alt="Belajar Logo" className="h-6 w-auto" />
-                                    <span className="text-xl font-bold">Belajar</span>
-                                </div>
-                                <p className="text-gray-600 text-sm">
-                                    Social learning platform for the modern learner.
-                                </p>
+            {/* Features Grid */}
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex-1">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl font-bold text-[#0F172A] tracking-tight mb-3">
+                        Standar Pembelajaran Terarah
+                    </h2>
+                    <p className="text-base text-[#64748B] max-w-2xl mx-auto">
+                        Setiap materi dibangun dengan struktur konsisten agar pemula dapat memahami konsep hingga menghasilkan proyek mandiri.
+                    </p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-8">
+                    <Card className="border border-[#E2E8F0] bg-white hover:border-[#BFDBFE] hover:shadow-sm transition-all duration-150">
+                        <CardHeader className="space-y-3 pb-3">
+                            <div className="w-12 h-12 rounded-[10px] bg-[#EFF6FF] border border-[#BFDBFE] text-[#1E3A8A] flex items-center justify-center font-bold text-xl shadow-xs">
+                                💻
                             </div>
-                            <div>
-                                <h4 className="font-semibold mb-4">Product</h4>
-                                <ul className="space-y-2 text-sm text-gray-600">
-                                    <li><a href="#" className="hover:text-blue-600">Features</a></li>
-                                    <li><a href="#" className="hover:text-blue-600">Courses</a></li>
-                                    <li><a href="#" className="hover:text-blue-600">Pricing</a></li>
-                                </ul>
+                            <CardTitle className="text-lg font-bold text-[#0F172A]">
+                                Lab Praktikum Mandiri
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-sm text-[#475569] leading-relaxed">
+                            Bukan sekadar video pasif. Disediakan berkas starter code yang dapat diunduh dan dijalankan secara langsung di komputer Anda.
+                        </CardContent>
+                    </Card>
+
+                    <Card className="border border-[#E2E8F0] bg-white hover:border-[#BFDBFE] hover:shadow-sm transition-all duration-150">
+                        <CardHeader className="space-y-3 pb-3">
+                            <div className="w-12 h-12 rounded-[10px] bg-[#EFF6FF] border border-[#BFDBFE] text-[#1E3A8A] flex items-center justify-center font-bold text-xl shadow-xs">
+                                🏆
                             </div>
-                            <div>
-                                <h4 className="font-semibold mb-4">Company</h4>
-                                <ul className="space-y-2 text-sm text-gray-600">
-                                    <li><a href="#" className="hover:text-blue-600">About</a></li>
-                                    <li><a href="#" className="hover:text-blue-600">Blog</a></li>
-                                    <li><a href="#" className="hover:text-blue-600">Careers</a></li>
-                                </ul>
+                            <CardTitle className="text-lg font-bold text-[#0F172A]">
+                                Proyek Capstone Nyata
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-sm text-[#475569] leading-relaxed">
+                            Setiap akhir track dilengkapi proyek capstone komprehensif dengan checklist kriteria mandiri untuk menguji pemahaman Anda.
+                        </CardContent>
+                    </Card>
+
+                    <Card className="border border-[#E2E8F0] bg-white hover:border-[#BFDBFE] hover:shadow-sm transition-all duration-150">
+                        <CardHeader className="space-y-3 pb-3">
+                            <div className="w-12 h-12 rounded-[10px] bg-[#EFF6FF] border border-[#BFDBFE] text-[#1E3A8A] flex items-center justify-center font-bold text-xl shadow-xs">
+                                🛡️
                             </div>
-                            <div>
-                                <h4 className="font-semibold mb-4">Legal</h4>
-                                <ul className="space-y-2 text-sm text-gray-600">
-                                    <li><a href="#" className="hover:text-blue-600">Privacy</a></li>
-                                    <li><a href="#" className="hover:text-blue-600">Terms</a></li>
-                                    <li><a href="#" className="hover:text-blue-600">Contact</a></li>
-                                </ul>
+                            <CardTitle className="text-lg font-bold text-[#0F172A]">
+                                Privasi & Kendali Penuh
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-sm text-[#475569] leading-relaxed">
+                            Semua kursus terbuka tanpa wajib mendaftar akun. Progres disimpan di browser lokal, dengan opsi sinkronisasi berizin ke dashboard.
+                        </CardContent>
+                    </Card>
+                </div>
+            </section>
+
+            {/* Current Project Status */}
+            <section className="bg-white border-y border-[#E2E8F0] py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight mb-2">
+                            Alur Perkembangan Platform
+                        </h2>
+                        <p className="text-sm text-[#64748B]">
+                            Pengembangan modular dan terverifikasi secara bertahap.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <div className="text-center p-6 rounded-[12px] border border-[#E2E8F0] bg-[#F8FAFC]">
+                            <div className="w-12 h-12 bg-[#1E3A8A] text-white rounded-[10px] flex items-center justify-center text-lg font-bold mx-auto mb-4 shadow-xs">
+                                1
                             </div>
+                            <h3 className="text-base font-bold text-[#0F172A] mb-1">Katalog & Rute Terbuka</h3>
+                            <p className="text-xs text-[#475569] leading-relaxed">
+                                Jalur belajar dasar web dan logika JavaScript dapat diakses bebas tanpa paywall.
+                            </p>
                         </div>
-                        <div className="mt-8 pt-8 text-center text-sm text-gray-600">
-                            <p>&copy; 2025 Belajar. Built with ❤️ by Programinglive Community.</p>
+
+                        <div className="text-center p-6 rounded-[12px] border border-[#E2E8F0] bg-[#F8FAFC]">
+                            <div className="w-12 h-12 bg-[#1E3A8A] text-white rounded-[10px] flex items-center justify-center text-lg font-bold mx-auto mb-4 shadow-xs">
+                                2
+                            </div>
+                            <h3 className="text-base font-bold text-[#0F172A] mb-1">Dashboard Pembelajar</h3>
+                            <p className="text-xs text-[#475569] leading-relaxed">
+                                Autentikasi akun untuk memantau modul yang selesai dan merangkum pencapaian belajar.
+                            </p>
+                        </div>
+
+                        <div className="text-center p-6 rounded-[12px] border border-[#E2E8F0] bg-[#F8FAFC]">
+                            <div className="w-12 h-12 bg-[#1E3A8A] text-white rounded-[10px] flex items-center justify-center text-lg font-bold mx-auto mb-4 shadow-xs">
+                                3
+                            </div>
+                            <h3 className="text-base font-bold text-[#0F172A] mb-1">Jalur Kolaborasi Open Source</h3>
+                            <p className="text-xs text-[#475569] leading-relaxed">
+                                Transisi dari pembelajar mandiri menuju kontributor nyata di ekosistem open-source ProgramingLive.
+                            </p>
                         </div>
                     </div>
-                </footer>
-            </div>
-        </>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="bg-[#1E3A8A] rounded-[16px] p-10 sm:p-14 text-center text-white shadow-xs">
+                    <h2 className="text-3xl font-bold tracking-tight mb-4">
+                        Mulai Perjalanan Koding Anda Hari Ini
+                    </h2>
+                    <p className="text-base text-blue-100 mb-8 max-w-xl mx-auto leading-relaxed">
+                        Bergabunglah dengan platform Belajar dari ProgramingLive. 100% terbuka, praktis, dan terstruktur untuk semua kalangan.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-3.5 justify-center">
+                        <Link href="/register">
+                            <Button size="lg" className="w-full sm:w-auto bg-[#2563EB] hover:bg-[#1D4ED8] text-white">
+                                Buat Akun Gratis
+                            </Button>
+                        </Link>
+                        <Link href="/tracks">
+                            <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-[#1E3A8A] hover:bg-slate-50">
+                                Buka Katalog Kursus
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Footer */}
+            <footer className="border-t border-[#E2E8F0] bg-white py-10 mt-auto">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#64748B]">
+                    <div className="flex items-center gap-2">
+                        <span className="font-extrabold text-[#1E3A8A]">PROGRAMINGLIVE</span>
+                        <span>•</span>
+                        <span>Belajar Platform — Inisiatif Edukasi Terbuka Indonesia.</span>
+                    </div>
+                    <div className="flex gap-5">
+                        <a href="https://programinglive.com" target="_blank" rel="noreferrer" className="hover:text-[#2563EB] transition-colors">
+                            Portal Utama
+                        </a>
+                        <a href="https://github.com/programinglive/belajar" target="_blank" rel="noreferrer" className="hover:text-[#2563EB] transition-colors">
+                            GitHub Repository
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
     );
 }

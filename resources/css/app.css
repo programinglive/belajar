@@ -1,1 +1,60 @@
 @import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #F8FAFC;
+    --surface: #FFFFFF;
+    --surface-elevated: #F1F5F9;
+
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+
+    --brand-primary: #1E3A8A;
+    --brand-action: #2563EB;
+    --brand-action-hover: #1D4ED8;
+    --brand-soft: #EFF6FF;
+    --brand-border: #BFDBFE;
+
+    --border: #E2E8F0;
+    --border-strong: #CBD5E1;
+
+    --success: #16A34A;
+    --warning: #F59E0B;
+    --danger: #DC2626;
+
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+  }
+
+  [data-theme="dark"] {
+    --background: #0F172A;
+    --surface: #1E293B;
+    --surface-elevated: #273549;
+
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+
+    --brand-primary: #3B82F6;
+    --brand-action: #3B82F6;
+    --brand-action-hover: #60A5FA;
+    --brand-soft: rgba(59, 130, 246, 0.1);
+    --brand-border: #1E3A8A;
+
+    --border: #334155;
+    --border-strong: #475569;
+
+    --success: #22C55E;
+    --warning: #FBBF24;
+    --danger: #EF4444;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}

@@ -46,18 +46,20 @@ export default function Index({ tracks = [] }: { tracks: Track[] }) {
 
     return (
         <Layout>
-            <Head title="Katalog Kursus & Jalur Belajar — Belajar" />
+            <Head title="Katalog Kursus & Jalur Belajar — ProgramingLive Belajar" />
 
-            <div className="bg-gradient-to-b from-blue-50/70 to-white border-b border-gray-100 py-16">
+            {/* Header */}
+            <div className="bg-white border-b border-[#E2E8F0] py-14">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-4">
-                        ✨ 100% Bebas Akses & Tanpa Paywall
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#EFF6FF] text-[#1E3A8A] border border-[#BFDBFE] mb-4">
+                        <span className="w-2 h-2 rounded-full bg-[#16A34A]"></span>
+                        100% Akses Terbuka Tanpa Biaya
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight mb-4">
                         Katalog Kursus & Jalur Belajar
                     </h1>
-                    <p className="max-w-2xl mx-auto text-lg text-gray-600">
-                        Pilih jalur pembelajaran mandiri yang dirancang bertahap untuk pemula. Lengkap dengan panduan konsep, starter files, lab praktikum, dan proyek capstone nyata.
+                    <p className="max-w-2xl mx-auto text-base text-[#475569] leading-relaxed">
+                        Pilih kurikulum pemrograman berbasis lab praktikum, kode starter nyata, dan proyek capstone terverifikasi.
                     </p>
 
                     {/* Filter Tabs */}
@@ -65,10 +67,10 @@ export default function Index({ tracks = [] }: { tracks: Track[] }) {
                         <button
                             type="button"
                             onClick={() => setFilter('all')}
-                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                            className={`px-4 py-2 rounded-[8px] text-xs font-semibold transition-all cursor-pointer ${
                                 filter === 'all'
-                                    ? 'bg-blue-600 text-white shadow-xs'
-                                    : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
+                                    ? 'bg-[#1E3A8A] text-white shadow-xs'
+                                    : 'bg-white text-[#475569] border border-[#CBD5E1] hover:bg-[#F8FAFC]'
                             }`}
                         >
                             Semua Track ({tracks.length})
@@ -76,21 +78,21 @@ export default function Index({ tracks = [] }: { tracks: Track[] }) {
                         <button
                             type="button"
                             onClick={() => setFilter('published')}
-                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                            className={`px-4 py-2 rounded-[8px] text-xs font-semibold transition-all cursor-pointer ${
                                 filter === 'published'
-                                    ? 'bg-blue-600 text-white shadow-xs'
-                                    : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
+                                    ? 'bg-[#1E3A8A] text-white shadow-xs'
+                                    : 'bg-white text-[#475569] border border-[#CBD5E1] hover:bg-[#F8FAFC]'
                             }`}
                         >
-                            Tersedia Sekarang ({tracks.filter((t) => t.status === 'published').length})
+                            Tersedia ({tracks.filter((t) => t.status === 'published').length})
                         </button>
                         <button
                             type="button"
                             onClick={() => setFilter('coming_soon')}
-                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                            className={`px-4 py-2 rounded-[8px] text-xs font-semibold transition-all cursor-pointer ${
                                 filter === 'coming_soon'
-                                    ? 'bg-blue-600 text-white shadow-xs'
-                                    : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
+                                    ? 'bg-[#1E3A8A] text-white shadow-xs'
+                                    : 'bg-white text-[#475569] border border-[#CBD5E1] hover:bg-[#F8FAFC]'
                             }`}
                         >
                             Segera Hadir ({tracks.filter((t) => t.status === 'coming_soon').length})
@@ -101,46 +103,51 @@ export default function Index({ tracks = [] }: { tracks: Track[] }) {
 
             {/* Courses Grid */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredTracks.map((track) => {
                         const isPublished = track.status === 'published';
                         const progress = track.user_progress;
                         const isStarted = progress && (progress.completed_lessons_count > 0 || progress.capstone_completed);
 
                         return (
-                            <Card key={track.slug} className="flex flex-col border border-gray-200 hover:shadow-md transition-shadow">
-                                <CardHeader className="space-y-2 pb-4">
+                            <Card
+                                key={track.slug}
+                                className="flex flex-col border border-[#E2E8F0] bg-white rounded-[12px] hover:border-[#BFDBFE] hover:shadow-sm transition-all duration-150"
+                            >
+                                <CardHeader className="space-y-2 pb-3">
                                     <div className="flex justify-between items-center">
-                                        <Badge variant={isPublished ? 'default' : 'secondary'} className={isPublished ? 'bg-emerald-600' : 'bg-gray-100 text-gray-600'}>
+                                        <Badge
+                                            variant={isPublished ? 'success' : 'secondary'}
+                                        >
                                             {isPublished ? 'Tersedia' : 'Segera Hadir'}
                                         </Badge>
-                                        <span className="text-xs font-medium text-gray-500">
-                                            {track.level} · {track.duration}
+                                        <span className="text-xs font-medium text-[#64748B]">
+                                            {track.level} • {track.duration}
                                         </span>
                                     </div>
-                                    <CardTitle className="text-xl font-bold text-gray-900 leading-snug">
+                                    <CardTitle className="text-lg font-bold text-[#0F172A] leading-snug pt-1">
                                         {track.title}
                                     </CardTitle>
                                     {track.subtitle && (
-                                        <CardDescription className="text-xs font-semibold text-blue-600">
+                                        <CardDescription className="text-xs font-semibold text-[#2563EB]">
                                             {track.subtitle}
                                         </CardDescription>
                                     )}
                                 </CardHeader>
 
-                                <CardContent className="flex-1 space-y-4 text-sm text-gray-600">
-                                    <p className="line-clamp-3">{track.description}</p>
+                                <CardContent className="flex-1 space-y-4 text-xs text-[#475569]">
+                                    <p className="line-clamp-3 leading-relaxed">{track.description}</p>
 
                                     {/* Lessons list summary */}
-                                    <div className="bg-gray-50 rounded-lg p-3 border border-gray-100">
-                                        <div className="flex justify-between items-center text-xs font-semibold text-gray-700 mb-2">
+                                    <div className="bg-[#F8FAFC] rounded-[8px] p-3 border border-[#E2E8F0]">
+                                        <div className="flex justify-between items-center text-xs font-semibold text-[#0F172A] mb-2">
                                             <span>Materi Pembelajaran</span>
-                                            <span>{track.lesson_count} Pelajaran</span>
+                                            <span>{track.lesson_count} Modul</span>
                                         </div>
-                                        <ul className="space-y-1 text-xs text-gray-600">
+                                        <ul className="space-y-1.5 text-xs text-[#475569]">
                                             {track.lessons.map((lesson) => (
-                                                <li key={lesson.number} className="flex items-center gap-1.5">
-                                                    <span className="w-4 h-4 rounded-full bg-blue-100 text-blue-700 text-[10px] flex items-center justify-center font-bold">
+                                                <li key={lesson.number} className="flex items-center gap-2">
+                                                    <span className="w-4 h-4 rounded-full bg-[#EFF6FF] text-[#1E3A8A] text-[10px] flex items-center justify-center font-bold">
                                                         {lesson.number}
                                                     </span>
                                                     <span className="truncate">{lesson.title}</span>
@@ -151,42 +158,42 @@ export default function Index({ tracks = [] }: { tracks: Track[] }) {
 
                                     {/* Capstone badge */}
                                     {track.has_capstone && (
-                                        <div className="flex items-center gap-2 text-xs text-emerald-800 bg-emerald-50 px-2.5 py-1.5 rounded-md border border-emerald-100">
+                                        <div className="flex items-center gap-2 text-xs text-[#16A34A] bg-[#DCFCE7]/50 px-2.5 py-1.5 rounded-[8px] border border-[#BBF7D0]">
                                             <span>🏆</span>
-                                            <span className="font-medium">Capstone: {track.capstone_title || 'Proyek Mandiri'}</span>
+                                            <span className="font-semibold">Capstone: {track.capstone_title || 'Proyek Mandiri'}</span>
                                         </div>
                                     )}
 
                                     {/* User progress bar if active */}
                                     {isStarted && (
-                                        <div className="space-y-1.5 pt-2 border-t border-gray-100">
-                                            <div className="flex justify-between text-xs font-medium text-gray-700">
+                                        <div className="space-y-1.5 pt-2 border-t border-[#E2E8F0]">
+                                            <div className="flex justify-between text-xs font-medium text-[#0F172A]">
                                                 <span>Progres Belajar Anda</span>
-                                                <span className="text-blue-600">{progress.percentage}%</span>
+                                                <span className="text-[#2563EB] font-bold">{progress.percentage}%</span>
                                             </div>
-                                            <div className="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                                            <div className="w-full bg-[#E2E8F0] h-2 rounded-full overflow-hidden">
                                                 <div
-                                                    className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                                                    className="bg-[#2563EB] h-2 rounded-full transition-all duration-300"
                                                     style={{ width: `${progress.percentage}%` }}
                                                 ></div>
                                             </div>
-                                            <div className="text-[11px] text-gray-500">
+                                            <div className="text-[11px] text-[#64748B]">
                                                 {progress.completed_lessons_count} dari {track.lesson_count} modul selesai
-                                                {progress.capstone_completed && ' · Capstone selesai 🎉'}
+                                                {progress.capstone_completed && ' • Capstone Selesai 🎉'}
                                             </div>
                                         </div>
                                     )}
                                 </CardContent>
 
-                                <CardFooter className="pt-4 border-t border-gray-100">
+                                <CardFooter className="pt-4 border-t border-[#F1F5F9]">
                                     {isPublished ? (
                                         <Link href={track.route || '/learn/first-web-page'} className="w-full">
-                                            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium cursor-pointer">
+                                            <Button className="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white">
                                                 {isStarted ? 'Lanjutkan Belajar' : 'Mulai Belajar'}
                                             </Button>
                                         </Link>
                                     ) : (
-                                        <Button disabled className="w-full bg-gray-100 text-gray-400 cursor-not-allowed">
+                                        <Button disabled variant="secondary" className="w-full text-[#94A3B8] border-[#E2E8F0]">
                                             Segera Hadir
                                         </Button>
                                     )}

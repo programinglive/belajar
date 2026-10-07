@@ -25,36 +25,43 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-xs">
+        <nav className="bg-white sticky top-0 z-50 border-b border-[#E2E8F0] shadow-xs">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Brand */}
                     <div className="flex items-center space-x-6">
-                        <Link href="/" className="flex items-center space-x-2">
-                            <img src="/images/logo.png" alt="Belajar Logo" className="h-8 w-auto" onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }} />
-                            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                                Belajar
-                            </span>
+                        <Link href="/" className="flex items-center space-x-2.5 group">
+                            <div className="w-8 h-8 rounded-[8px] bg-[#1E3A8A] flex items-center justify-center text-white font-bold text-sm tracking-wider shadow-xs">
+                                PL
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-sm font-extrabold tracking-tight text-[#1E3A8A] leading-tight">
+                                    PROGRAMINGLIVE
+                                </span>
+                                <span className="text-[11px] font-semibold text-[#2563EB] -mt-0.5 tracking-wider uppercase">
+                                    Belajar Platform
+                                </span>
+                            </div>
                         </Link>
 
                         {/* Desktop Navigation Links */}
-                        <div className="hidden md:flex items-center space-x-1">
+                        <div className="hidden md:flex items-center space-x-1 pl-4">
                             <Link
                                 href="/"
-                                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                className={`px-3 py-2 rounded-[8px] text-sm font-medium transition-colors ${
                                     isActive('/')
-                                        ? 'text-blue-600 bg-blue-50/60 font-semibold'
-                                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                                        ? 'text-[#2563EB] bg-[#EFF6FF] font-semibold'
+                                        : 'text-[#475569] hover:text-[#0F172A] hover:bg-[#F8FAFC]'
                                 }`}
                             >
-                                Home
+                                Beranda
                             </Link>
                             <Link
                                 href="/tracks"
-                                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                className={`px-3 py-2 rounded-[8px] text-sm font-medium transition-colors ${
                                     isActive('/tracks')
-                                        ? 'text-blue-600 bg-blue-50/60 font-semibold'
-                                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                                        ? 'text-[#2563EB] bg-[#EFF6FF] font-semibold'
+                                        : 'text-[#475569] hover:text-[#0F172A] hover:bg-[#F8FAFC]'
                                 }`}
                             >
                                 Katalog Kursus
@@ -62,10 +69,10 @@ export default function Navbar() {
                             {user && (
                                 <Link
                                     href="/dashboard"
-                                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                    className={`px-3 py-2 rounded-[8px] text-sm font-medium transition-colors ${
                                         isActive('/dashboard')
-                                            ? 'text-blue-600 bg-blue-50/60 font-semibold'
-                                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                                            ? 'text-[#2563EB] bg-[#EFF6FF] font-semibold'
+                                            : 'text-[#475569] hover:text-[#0F172A] hover:bg-[#F8FAFC]'
                                     }`}
                                 >
                                     Dashboard
@@ -75,9 +82,9 @@ export default function Navbar() {
                                 href="https://programinglive.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-50 flex items-center gap-1"
+                                className="px-3 py-2 rounded-[8px] text-sm font-medium text-[#64748B] hover:text-[#0F172A] hover:bg-[#F8FAFC] flex items-center gap-1 transition-colors"
                             >
-                                <span>Portal ProgramingLive</span>
+                                <span>Portal Utama</span>
                                 <svg className="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
@@ -91,30 +98,30 @@ export default function Navbar() {
                             <div className="flex items-center space-x-3">
                                 <Link
                                     href="/dashboard"
-                                    className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-medium hover:bg-blue-100 transition-colors"
+                                    className="flex items-center gap-2 px-3 py-1.5 rounded-[8px] border border-[#BFDBFE] bg-[#EFF6FF] text-[#1E3A8A] text-xs font-semibold hover:bg-blue-100/70 transition-colors"
                                 >
-                                    <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    <span className="w-2 h-2 rounded-full bg-[#16A34A]"></span>
                                     <span>{user.name}</span>
                                 </Link>
                                 <Button
                                     variant="ghost"
                                     size="sm"
                                     onClick={handleLogout}
-                                    className="text-gray-600 hover:text-red-600 hover:bg-red-50 text-xs cursor-pointer"
+                                    className="text-[#64748B] hover:text-[#DC2626] hover:bg-red-50 text-xs"
                                 >
                                     Keluar
                                 </Button>
                             </div>
                         ) : (
-                            <div className="flex items-center space-x-2">
+                            <div className="flex items-center space-x-2.5">
                                 <Link href="/login">
-                                    <Button variant="ghost" size="sm" className="text-gray-700 hover:text-gray-900">
-                                        Sign In
+                                    <Button variant="ghost" size="sm" className="text-[#0F172A]">
+                                        Masuk
                                     </Button>
                                 </Link>
                                 <Link href="/register">
-                                    <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white shadow-xs">
-                                        Get Started
+                                    <Button size="sm" className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white">
+                                        Mulai Belajar
                                     </Button>
                                 </Link>
                             </div>
@@ -127,7 +134,7 @@ export default function Navbar() {
                             type="button"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             aria-label="Toggle navigation"
-                            className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-hidden"
+                            className="p-2 rounded-[8px] text-[#475569] hover:text-[#0F172A] hover:bg-[#F8FAFC]"
                         >
                             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 {mobileMenuOpen ? (
@@ -143,21 +150,21 @@ export default function Navbar() {
 
             {/* Mobile Menu Dropdown */}
             {mobileMenuOpen && (
-                <div className="md:hidden border-t border-gray-100 bg-white px-4 pt-2 pb-4 space-y-1 shadow-lg">
+                <div className="md:hidden border-t border-[#E2E8F0] bg-white px-4 pt-2 pb-4 space-y-1 shadow-sm">
                     <Link
                         href="/"
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`block px-3 py-2 rounded-md text-base font-medium ${
-                            isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:bg-gray-50'
+                        className={`block px-3 py-2 rounded-[8px] text-sm font-medium ${
+                            isActive('/') ? 'text-[#2563EB] bg-[#EFF6FF] font-semibold' : 'text-[#475569] hover:bg-[#F8FAFC]'
                         }`}
                     >
-                        Home
+                        Beranda
                     </Link>
                     <Link
                         href="/tracks"
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`block px-3 py-2 rounded-md text-base font-medium ${
-                            isActive('/tracks') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:bg-gray-50'
+                        className={`block px-3 py-2 rounded-[8px] text-sm font-medium ${
+                            isActive('/tracks') ? 'text-[#2563EB] bg-[#EFF6FF] font-semibold' : 'text-[#475569] hover:bg-[#F8FAFC]'
                         }`}
                     >
                         Katalog Kursus
@@ -166,8 +173,8 @@ export default function Navbar() {
                         <Link
                             href="/dashboard"
                             onClick={() => setMobileMenuOpen(false)}
-                            className={`block px-3 py-2 rounded-md text-base font-medium ${
-                                isActive('/dashboard') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:bg-gray-50'
+                            className={`block px-3 py-2 rounded-[8px] text-sm font-medium ${
+                                isActive('/dashboard') ? 'text-[#2563EB] bg-[#EFF6FF] font-semibold' : 'text-[#475569] hover:bg-[#F8FAFC]'
                             }`}
                         >
                             Dashboard
@@ -177,25 +184,25 @@ export default function Navbar() {
                         href="https://programinglive.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:bg-gray-50"
+                        className="block px-3 py-2 rounded-[8px] text-sm font-medium text-[#64748B] hover:bg-[#F8FAFC]"
                     >
                         Portal ProgramingLive ↗
                     </a>
-                    <div className="pt-4 border-t border-gray-100">
+                    <div className="pt-3 border-t border-[#E2E8F0]">
                         {user ? (
                             <div className="flex items-center justify-between">
-                                <span className="text-sm font-medium text-gray-700">{user.name}</span>
-                                <Button variant="ghost" size="sm" onClick={handleLogout} className="text-red-600 hover:bg-red-50 text-xs">
+                                <span className="text-xs font-semibold text-[#0F172A]">{user.name}</span>
+                                <Button variant="ghost" size="sm" onClick={handleLogout} className="text-[#DC2626] hover:bg-red-50 text-xs">
                                     Keluar
                                 </Button>
                             </div>
                         ) : (
                             <div className="flex gap-2">
                                 <Link href="/login" className="flex-1" onClick={() => setMobileMenuOpen(false)}>
-                                    <Button variant="outline" className="w-full text-xs">Sign In</Button>
+                                    <Button variant="secondary" size="sm" className="w-full text-xs">Masuk</Button>
                                 </Link>
                                 <Link href="/register" className="flex-1" onClick={() => setMobileMenuOpen(false)}>
-                                    <Button className="w-full text-xs bg-blue-600 text-white">Get Started</Button>
+                                    <Button size="sm" className="w-full text-xs bg-[#2563EB] hover:bg-[#1D4ED8] text-white">Mulai Belajar</Button>
                                 </Link>
                             </div>
                         )}

@@ -2,7 +2,8 @@ import Navbar from '@/components/Navbar';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Head, Link } from '@inertiajs/react';
+import CodeBlock from '@/components/ui/CodeBlock';
+import { Head } from '@inertiajs/react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -243,15 +244,15 @@ export default function JavascriptLogicDom() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-col text-gray-900">
-            <Head title="Track 2: Dasar Logika JavaScript & DOM — Belajar" />
+        <div className="min-h-screen bg-[#F8FAFC] flex flex-col text-[#0F172A] font-sans antialiased">
+            <Head title="Track 2: Dasar Logika JavaScript & DOM — ProgramingLive Belajar" />
             <Navbar />
 
             {/* Hero Header */}
-            <header className="bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-800 text-white py-14">
+            <header className="bg-[#1E3A8A] text-white py-14 border-b border-[#172554]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-blue-100 backdrop-blur-xs mb-4">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[8px] text-xs font-semibold bg-white/10 text-blue-100 border border-white/20 mb-4">
                             <span>Track 2</span>
                             <span>•</span>
                             <span>Pemula</span>
@@ -261,7 +262,7 @@ export default function JavascriptLogicDom() {
                         <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
                             Dasar Logika JavaScript & DOM
                         </h1>
-                        <p className="text-lg text-blue-100 leading-relaxed mb-6">
+                        <p className="text-base sm:text-lg text-blue-100 leading-relaxed mb-6">
                             Pelajari fondasi pemrograman web interaktif. Kuasai variabel, percabangan logika, fungsi modular, dan manipulasi elemen HTML melalui proyek praktis: <strong>Aplikasi Kalkulator Sederhana</strong>.
                         </p>
                         <div className="flex flex-wrap gap-4 text-xs font-medium text-blue-200">
@@ -273,17 +274,17 @@ export default function JavascriptLogicDom() {
                 </div>
             </header>
 
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 space-y-12">
-                {/* Downloadable Resources & Sandbox Preview */}
-                <Card className="border border-blue-200 bg-white shadow-xs">
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 space-y-10">
+                {/* Downloadable Resources */}
+                <Card className="border border-[#E2E8F0] bg-white rounded-[12px] shadow-xs">
                     <CardHeader className="pb-3">
                         <div className="flex justify-between items-start">
                             <div>
-                                <Badge className="bg-blue-600 text-white mb-1">Materi & Starter Files</Badge>
-                                <CardTitle className="text-xl font-bold text-gray-900">
+                                <Badge variant="default" className="text-xs mb-1">Materi & Starter Files</Badge>
+                                <CardTitle className="text-lg font-bold text-[#0F172A]">
                                     Unduh Berkas Pembelajaran & Uji Coba Proyek
                                 </CardTitle>
-                                <CardDescription className="text-sm text-gray-600">
+                                <CardDescription className="text-xs text-[#64748B]">
                                     Anda dapat menjalankan kode secara offline di komputer Anda tanpa perlu menginstal framework apa pun.
                                 </CardDescription>
                             </div>
@@ -294,32 +295,32 @@ export default function JavascriptLogicDom() {
                             <a
                                 href="/learn/javascript-logic/starter/index.html"
                                 download="index.html"
-                                className="p-3 rounded-lg border border-gray-200 hover:border-blue-500 hover:bg-blue-50/50 transition-colors flex items-center justify-between text-xs font-medium text-gray-700"
+                                className="p-3 rounded-[8px] border border-[#E2E8F0] hover:border-[#BFDBFE] hover:bg-[#F8FAFC] transition-colors flex items-center justify-between text-xs font-medium text-[#0F172A]"
                             >
                                 <span>📄 Starter index.html</span>
-                                <span className="text-blue-600">Unduh ↓</span>
+                                <span className="text-[#2563EB] font-semibold">Unduh ↓</span>
                             </a>
                             <a
                                 href="/learn/javascript-logic/starter/styles.css"
                                 download="styles.css"
-                                className="p-3 rounded-lg border border-gray-200 hover:border-blue-500 hover:bg-blue-50/50 transition-colors flex items-center justify-between text-xs font-medium text-gray-700"
+                                className="p-3 rounded-[8px] border border-[#E2E8F0] hover:border-[#BFDBFE] hover:bg-[#F8FAFC] transition-colors flex items-center justify-between text-xs font-medium text-[#0F172A]"
                             >
                                 <span>🎨 Starter styles.css</span>
-                                <span className="text-blue-600">Unduh ↓</span>
+                                <span className="text-[#2563EB] font-semibold">Unduh ↓</span>
                             </a>
                             <a
                                 href="/learn/javascript-logic/starter/app.js"
                                 download="app.js"
-                                className="p-3 rounded-lg border border-gray-200 hover:border-blue-500 hover:bg-blue-50/50 transition-colors flex items-center justify-between text-xs font-medium text-gray-700"
+                                className="p-3 rounded-[8px] border border-[#E2E8F0] hover:border-[#BFDBFE] hover:bg-[#F8FAFC] transition-colors flex items-center justify-between text-xs font-medium text-[#0F172A]"
                             >
                                 <span>⚡ Starter app.js</span>
-                                <span className="text-blue-600">Unduh ↓</span>
+                                <span className="text-[#2563EB] font-semibold">Unduh ↓</span>
                             </a>
                             <a
                                 href="/learn/javascript-logic/example/index.html"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 hover:bg-emerald-100 transition-colors flex items-center justify-between text-xs font-semibold"
+                                className="p-3 rounded-[8px] bg-[#DCFCE7]/40 border border-[#BBF7D0] text-[#16A34A] hover:bg-[#DCFCE7]/70 transition-colors flex items-center justify-between text-xs font-bold"
                             >
                                 <span>🚀 Buka Contoh Selesai</span>
                                 <span>Buka ↗</span>
@@ -330,14 +331,14 @@ export default function JavascriptLogicDom() {
 
                 {/* 5 Lesson Modules Navigation & Content */}
                 <div className="space-y-6">
-                    <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-gray-200 pb-4">
+                    <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-[#E2E8F0] pb-4">
                         <div>
-                            <h2 className="text-2xl font-bold text-gray-900">Kurikulum 5 Modul</h2>
-                            <p className="text-sm text-gray-600">Pelajari materi secara berurutan mulai dari variabel hingga perakitan aplikasi.</p>
+                            <h2 className="text-2xl font-bold text-[#0F172A] tracking-tight">Kurikulum 5 Modul</h2>
+                            <p className="text-xs text-[#64748B]">Pelajari materi secara berurutan mulai dari variabel hingga perakitan aplikasi.</p>
                         </div>
-                        <div className="text-xs font-semibold text-blue-700 bg-blue-50 px-3 py-1.5 rounded-full border border-blue-200">
+                        <Badge variant="default" className="text-xs">
                             {completedLessonNumbers.length} dari 5 Modul Ditandai Selesai
-                        </div>
+                        </Badge>
                     </div>
 
                     {/* Lesson Tab Selector */}
@@ -351,10 +352,10 @@ export default function JavascriptLogicDom() {
                                     key={lesson.number}
                                     type="button"
                                     onClick={() => setActiveLessonTab(lesson.number)}
-                                    className={`px-4 py-2.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-2 cursor-pointer ${
+                                    className={`px-3.5 py-2 rounded-[8px] text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-2 cursor-pointer ${
                                         isActive
-                                            ? 'bg-blue-600 text-white shadow-xs'
-                                            : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
+                                            ? 'bg-[#1E3A8A] text-white shadow-xs'
+                                            : 'bg-white text-[#475569] border border-[#E2E8F0] hover:bg-[#F8FAFC]'
                                     }`}
                                 >
                                     <span
@@ -362,8 +363,8 @@ export default function JavascriptLogicDom() {
                                             isActive
                                                 ? 'bg-white/20 text-white'
                                                 : isDone
-                                                ? 'bg-emerald-100 text-emerald-700'
-                                                : 'bg-gray-100 text-gray-600'
+                                                ? 'bg-[#DCFCE7] text-[#16A34A]'
+                                                : 'bg-[#F1F5F9] text-[#64748B]'
                                         }`}
                                     >
                                         {isDone ? '✓' : lesson.number}
@@ -381,77 +382,79 @@ export default function JavascriptLogicDom() {
                             const isDone = Boolean(checkedItems[`lesson-${lesson.number}`]);
 
                             return (
-                                <Card key={lesson.number} className="border border-gray-200 bg-white shadow-xs">
-                                    <CardHeader className="pb-4 border-b border-gray-100">
+                                <Card key={lesson.number} className="border border-[#E2E8F0] bg-white rounded-[12px] shadow-xs">
+                                    <CardHeader className="pb-3 border-b border-[#F1F5F9]">
                                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                                             <div>
-                                                <Badge variant="outline" className="text-blue-700 bg-blue-50 border-blue-200 mb-1">
-                                                    Modul {lesson.number} · {lesson.duration}
+                                                <Badge variant="default" className="text-xs mb-1">
+                                                    Modul {lesson.number} • {lesson.duration}
                                                 </Badge>
-                                                <CardTitle className="text-2xl font-bold text-gray-900">
+                                                <CardTitle className="text-xl font-bold text-[#0F172A]">
                                                     {lesson.title}
                                                 </CardTitle>
                                             </div>
-                                            <label className="flex items-center gap-2.5 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-lg border border-gray-200 cursor-pointer text-xs font-semibold text-gray-700 transition-colors">
+                                            <label className="flex items-center gap-2 bg-[#F8FAFC] hover:bg-slate-100 px-3 py-1.5 rounded-[8px] border border-[#CBD5E1] cursor-pointer text-xs font-semibold text-[#0F172A] transition-colors">
                                                 <input
                                                     type="checkbox"
                                                     checked={isDone}
                                                     onChange={() => toggleCheck(`lesson-${lesson.number}`)}
-                                                    className="w-4 h-4 rounded-xs text-blue-600 focus:ring-blue-500"
+                                                    className="w-3.5 h-3.5 rounded-xs text-[#2563EB] focus:ring-blue-500"
                                                 />
                                                 <span>Tandai Modul Selesai</span>
                                             </label>
                                         </div>
                                     </CardHeader>
 
-                                    <CardContent className="space-y-6 pt-6 text-sm text-gray-700 leading-relaxed">
+                                    <CardContent className="space-y-5 pt-5 text-xs text-[#475569] leading-relaxed">
                                         {/* Prerequisite & Outcome */}
-                                        <div className="grid sm:grid-cols-2 gap-4 bg-gray-50/70 p-4 rounded-lg border border-gray-100">
+                                        <div className="grid sm:grid-cols-2 gap-3 bg-[#F8FAFC] p-3.5 rounded-[8px] border border-[#E2E8F0]">
                                             <div>
-                                                <span className="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1">
-                                                    Prasyarat
+                                                <span className="font-bold text-[#64748B] block mb-0.5">
+                                                    Prasyarat:
                                                 </span>
-                                                <p className="text-xs text-gray-700">{lesson.prerequisite}</p>
+                                                <p>{lesson.prerequisite}</p>
                                             </div>
                                             <div>
-                                                <span className="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">
-                                                    Target Capaian
+                                                <span className="font-bold text-[#2563EB] block mb-0.5">
+                                                    Target Capaian:
                                                 </span>
-                                                <p className="text-xs text-gray-700 font-medium">{lesson.outcome}</p>
+                                                <p className="font-medium text-[#0F172A]">{lesson.outcome}</p>
                                             </div>
                                         </div>
 
                                         {/* Steps */}
                                         <div>
-                                            <h3 className="font-bold text-gray-900 mb-2">Langkah Pembelajaran:</h3>
-                                            <ol className="list-decimal pl-5 space-y-1.5 text-xs text-gray-600">
+                                            <h3 className="font-bold text-[#0F172A] mb-2 text-sm">Langkah Pembelajaran:</h3>
+                                            <ol className="list-decimal pl-5 space-y-1">
                                                 {lesson.steps.map((step, idx) => (
                                                     <li key={idx}>{step}</li>
                                                 ))}
                                             </ol>
                                         </div>
 
-                                        {/* Code Snippet Example if present */}
+                                        {/* Code Snippet Example with CodeBlock */}
                                         {lesson.codeSnippet && (
                                             <div>
-                                                <h3 className="font-bold text-gray-900 mb-2">Contoh Potongan Kode:</h3>
-                                                <div className="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-gray-800">
-                                                    <pre>{lesson.codeSnippet}</pre>
-                                                </div>
+                                                <h3 className="font-bold text-[#0F172A] mb-1 text-sm">Contoh Kode:</h3>
+                                                <CodeBlock
+                                                    code={lesson.codeSnippet}
+                                                    language="javascript"
+                                                    filename="app.js"
+                                                />
                                             </div>
                                         )}
 
                                         {/* Practical Lab */}
-                                        <div className="bg-blue-50/60 border border-blue-200 p-4 rounded-lg space-y-2">
-                                            <h3 className="font-bold text-blue-900 text-sm flex items-center gap-1.5">
+                                        <div className="bg-[#EFF6FF] border border-[#BFDBFE] p-3.5 rounded-[8px] space-y-1 text-[#1E3A8A]">
+                                            <h3 className="font-bold text-xs flex items-center gap-1.5">
                                                 <span>🔬 Lab Mandiri:</span>
                                             </h3>
-                                            <p className="text-xs text-blue-950 font-medium">{lesson.lab}</p>
-                                            <div className="pt-2 border-t border-blue-200/60">
-                                                <span className="text-[11px] font-bold text-blue-800 uppercase block mb-1">
+                                            <p className="font-medium">{lesson.lab}</p>
+                                            <div className="pt-2 border-t border-[#BFDBFE]/70 mt-2">
+                                                <span className="font-bold uppercase text-[10px] block mb-1">
                                                     Hasil yang Diharapkan:
                                                 </span>
-                                                <ul className="list-disc pl-4 space-y-1 text-xs text-blue-900">
+                                                <ul className="list-disc pl-4 space-y-0.5">
                                                     {lesson.expected.map((exp, idx) => (
                                                         <li key={idx}>{exp}</li>
                                                     ))}
@@ -461,11 +464,11 @@ export default function JavascriptLogicDom() {
 
                                         {/* Self Check Criteria */}
                                         <div>
-                                            <h3 className="font-bold text-gray-900 mb-2">Pemeriksaan Mandiri (Self-Check):</h3>
+                                            <h3 className="font-bold text-[#0F172A] mb-2 text-sm">Pemeriksaan Mandiri (Self-Check):</h3>
                                             <ul className="space-y-1.5">
                                                 {lesson.checks.map((check, idx) => (
-                                                    <li key={idx} className="flex items-center gap-2 text-xs text-gray-600">
-                                                        <span className="text-emerald-600 font-bold">✓</span>
+                                                    <li key={idx} className="flex items-center gap-2">
+                                                        <span className="text-[#16A34A] font-bold">✓</span>
                                                         <span>{check}</span>
                                                     </li>
                                                 ))}
@@ -478,53 +481,53 @@ export default function JavascriptLogicDom() {
                 </div>
 
                 {/* Capstone Project Checklist */}
-                <div className="space-y-4 pt-6 border-t border-gray-200">
+                <div className="space-y-4 pt-4 border-t border-[#E2E8F0]">
                     <div className="flex justify-between items-baseline">
                         <div>
-                            <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <h2 className="text-2xl font-bold text-[#0F172A] flex items-center gap-2">
                                 <span>🏆</span>
                                 <span>Tantangan Capstone: Aplikasi Kalkulator Sederhana</span>
                             </h2>
-                            <p className="text-sm text-gray-600 mt-1">
+                            <p className="text-xs text-[#64748B] mt-1">
                                 Pastikan kode kalkulator Anda memenuhi semua kriteria di bawah ini sebelum menandai proyek selesai.
                             </p>
                         </div>
                         {isCapstoneFullyChecked && (
-                            <Badge className="bg-emerald-600 text-white font-semibold">
+                            <Badge variant="success" className="font-bold">
                                 Capstone Selesai 🎉
                             </Badge>
                         )}
                     </div>
 
-                    <Card className="border border-emerald-200 bg-white shadow-xs">
-                        <CardContent className="pt-6 space-y-4">
-                            <div className="space-y-3">
+                    <Card className="border border-[#BBF7D0] bg-[#DCFCE7]/20 rounded-[12px] shadow-xs">
+                        <CardContent className="pt-5 space-y-4">
+                            <div className="space-y-2.5">
                                 {capstoneItems.map((item, idx) => {
                                     const isChecked = Boolean(checkedItems[`capstone-${idx}`]);
                                     return (
                                         <label
                                             key={idx}
-                                            className={`flex items-start gap-3 p-3 rounded-lg border transition-all cursor-pointer ${
+                                            className={`flex items-start gap-2.5 p-2.5 rounded-[8px] border transition-all cursor-pointer text-xs ${
                                                 isChecked
-                                                    ? 'bg-emerald-50/60 border-emerald-200 text-emerald-950 font-medium'
-                                                    : 'bg-gray-50/60 border-gray-200 text-gray-700 hover:bg-gray-100'
+                                                    ? 'bg-white border-[#BBF7D0] text-[#16A34A] font-medium'
+                                                    : 'bg-white/60 border-transparent hover:bg-white text-[#0F172A]'
                                             }`}
                                         >
                                             <input
                                                 type="checkbox"
                                                 checked={isChecked}
                                                 onChange={() => toggleCheck(`capstone-${idx}`)}
-                                                className="mt-0.5 w-4 h-4 rounded-xs text-emerald-600 focus:ring-emerald-500"
+                                                className="mt-0.5 w-3.5 h-3.5 rounded-xs text-[#16A34A] focus:ring-emerald-500"
                                             />
-                                            <span className="text-xs leading-relaxed">{item}</span>
+                                            <span className="leading-relaxed">{item}</span>
                                         </label>
                                     );
                                 })}
                             </div>
 
                             {/* Optional Notes */}
-                            <div className="pt-4 border-t border-gray-100 space-y-2">
-                                <label htmlFor="capstone-notes" className="text-xs font-semibold text-gray-700 block">
+                            <div className="pt-3 border-t border-[#BBF7D0]/50 space-y-1.5">
+                                <label htmlFor="capstone-notes" className="text-xs font-semibold text-[#0F172A] block">
                                     Catatan Pembelajaran atau Tautan Demo Proyek Anda (Opsional):
                                 </label>
                                 <textarea
@@ -532,36 +535,36 @@ export default function JavascriptLogicDom() {
                                     rows={3}
                                     value={notes}
                                     onChange={(e) => setNotes(e.target.value)}
-                                    placeholder="Contoh: Menambahkan fitur styling khusus untuk tombol aktif dan pesan validasi saat input kosong."
-                                    className="w-full text-xs p-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none"
+                                    placeholder="Contoh: Menambahkan styling khusus untuk tombol operasi dan pesan validasi saat input kosong."
+                                    className="w-full text-xs p-2.5 rounded-[8px] border border-[#CBD5E1] bg-white focus:border-[#2563EB] focus:outline-none"
                                 />
                             </div>
 
                             {/* Data Consent & Save Progress */}
-                            <div className="pt-4 border-t border-gray-100 bg-gray-50 p-4 rounded-lg space-y-3">
+                            <div className="pt-3 border-t border-[#BBF7D0]/50 bg-white/70 p-3.5 rounded-[8px] space-y-3">
                                 <label className="flex items-start gap-2.5 cursor-pointer">
                                     <input
                                         type="checkbox"
                                         checked={consentGiven}
                                         onChange={(e) => handleConsentChange(e.target.checked)}
-                                        className="mt-0.5 w-4 h-4 rounded-xs text-blue-600 focus:ring-blue-500"
+                                        className="mt-0.5 w-3.5 h-3.5 rounded-xs text-[#2563EB] focus:ring-blue-500"
                                     />
-                                    <span className="text-xs text-gray-600 leading-normal">
+                                    <span className="text-xs text-[#475569] leading-relaxed">
                                         Saya setuju untuk menyimpan progres belajar ini (nomor modul dan status capstone) ke akun saya. Data ini hanya digunakan untuk menampilkan perkembangan di Dashboard saya dan dapat dicabut kapan saja.
                                     </span>
                                 </label>
 
-                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-2">
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-1">
                                     <Button
                                         onClick={handleSaveProgress}
                                         disabled={isSaving}
-                                        className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-5"
+                                        className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs font-semibold px-4"
                                     >
                                         {isSaving ? 'Menyimpan...' : 'Sinkronkan Progres ke Dashboard'}
                                     </Button>
 
                                     {saveStatus && (
-                                        <span className="text-xs font-medium text-blue-700">
+                                        <span className="text-xs font-semibold text-[#1E3A8A]">
                                             {saveStatus}
                                         </span>
                                     )}
@@ -572,8 +575,8 @@ export default function JavascriptLogicDom() {
                 </div>
             </main>
 
-            <footer className="border-t border-gray-200 bg-white py-6">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-gray-500">
+            <footer className="border-t border-[#E2E8F0] bg-white py-6 mt-auto">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-[#64748B]">
                     <p>© 2026 Belajar — ProgramingLive Initiative. Belajar pemrograman tanpa hambatan.</p>
                 </div>
             </footer>
