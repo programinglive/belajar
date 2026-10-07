@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/programinglive/belajar/compare/v0.0.12...v0.0.13) (2026-10-07)
+
+
+### 📝 Documentation
+
+* update release notes for v0.0.12 ([3776c71](https://github.com/programinglive/belajar/commit/3776c71b5aa673613951cc402d96102921bdd581))
+
+
+### ✨ Features
+
+* **ui:** standardize global design system and brand identity across all pages ([3f1bb5f](https://github.com/programinglive/belajar/commit/3f1bb5f99577d494e0774622e910db4b1c2c9073))
+
 ### [0.0.12](https://github.com/programinglive/belajar/compare/v0.0.11...v0.0.12) (2026-10-07)
 
 
