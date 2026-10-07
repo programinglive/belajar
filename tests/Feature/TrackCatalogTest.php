@@ -34,7 +34,7 @@ class TrackCatalogTest extends TestCase
             ->where('tracks.0.slug', 'first-web-page')
             ->where('tracks.0.status', 'published')
             ->where('tracks.1.slug', 'javascript-logic-dom')
-            ->where('tracks.1.status', 'coming_soon')
+            ->where('tracks.1.status', 'published')
             ->where('tracks.2.slug', 'git-github-fundamentals')
             ->where('tracks.2.status', 'coming_soon')
         );
