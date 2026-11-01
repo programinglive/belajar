@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.14](https://github.com/programinglive/belajar/compare/v0.0.13...v0.0.14) (2026-11-01)
+
+
+### 📝 Documentation
+
+* update release notes for v0.0.13 ([69c329d](https://github.com/programinglive/belajar/commit/69c329dea2ac10e96ba4e352e510a887a3060cdd))
+
+
+### 🐛 Bug Fixes
+
+* **pilot:** cari elemen lewat data-testid, bukan teks UI yang berubah saat rebrand ([bac8c91](https://github.com/programinglive/belajar/commit/bac8c91af3014d3aa1fab457d47d1564de22ec31))
+
 ### [0.0.13](https://github.com/programinglive/belajar/compare/v0.0.12...v0.0.13) (2026-10-07)
 
 
