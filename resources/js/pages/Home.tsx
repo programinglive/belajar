@@ -29,7 +29,7 @@ export default function Home() {
                                 Jelajahi Katalog Kursus
                             </Button>
                         </Link>
-                        <Link href="/learn/first-web-page">
+                        <Link href="/learn/first-web-page" data-testid="home-start-track">
                             <Button size="lg" variant="secondary" className="w-full sm:w-auto border-[#CBD5E1]">
                                 Mulai Track Web Pemula
                             </Button>

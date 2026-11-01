@@ -87,7 +87,7 @@ export default function Dashboard({
                                 <span className="w-2 h-2 rounded-full bg-[#16A34A]"></span>
                                 Dashboard Pembelajar
                             </div>
-                            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+                            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight" data-testid="dashboard-heading">
                                 Halo, {user?.name || 'Pembelajar'}! 👋
                             </h1>
                             <p className="text-blue-100 text-sm mt-1.5 max-w-2xl leading-relaxed">

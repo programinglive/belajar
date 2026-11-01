@@ -49,6 +49,7 @@ export default function Login({ status, canResetPassword }: { status?: string; c
                                 </Label>
                                 <Input
                                     id="email"
+                                    data-testid="login-email"
                                     type="email"
                                     placeholder="nama@email.com"
                                     value={data.email}
@@ -73,6 +74,7 @@ export default function Login({ status, canResetPassword }: { status?: string; c
                                 </div>
                                 <Input
                                     id="password"
+                                    data-testid="login-password"
                                     type="password"
                                     value={data.password}
                                     onChange={(e) => setData('password', e.target.value)}
@@ -80,7 +82,7 @@ export default function Login({ status, canResetPassword }: { status?: string; c
                                 />
                                 {errors.password && <p className="text-xs text-[#DC2626] font-medium">{errors.password}</p>}
                             </div>
-                            <Button type="submit" className="w-full bg-[#2563EB] hover:bg-[#1D4ED8]" disabled={processing}>
+                            <Button type="submit" data-testid="login-submit" className="w-full bg-[#2563EB] hover:bg-[#1D4ED8]" disabled={processing}>
                                 {processing ? 'Memproses Masuk...' : 'Masuk ke Akun'}
                             </Button>
                         </form>

@@ -16,6 +16,34 @@ The Belajar pilot user:
 
 Production credentials live only in GitHub Actions secrets named `BELAJAR_PILOT_EMAIL` and `BELAJAR_PILOT_PASSWORD`. Results are posted by the `ProgramingLive Pilot Tester` Discord bot through `DISCORD_PILOT_WEBHOOK_URL`. These values must never be committed or printed in logs.
 
+## Locating elements: `data-testid`, never the copy
+
+The browser journey selects every element by `data-testid`, not by the text a
+learner sees. Between 7 and 31 October 2026 every label changed with the
+Indonesian rebrand ("Start the Free Track" became "Mulai Track Web Pemula",
+"Sign in" became "Masuk ke Akun"), and the pilot failed every single day for a
+reason that had nothing to do with production health.
+
+| Step | `data-testid` | Where |
+|---|---|---|
+| Home CTA | `home-start-track` | `resources/js/pages/Home.tsx` |
+| Track title | `track-title` | `courses/FirstWebPage.tsx` |
+| Lesson titles | `lesson-1` … `lesson-4` | `courses/FirstWebPage.tsx` |
+| Capstone title | `capstone-title` | `courses/FirstWebPage.tsx` |
+| Example link | `open-example` | `courses/FirstWebPage.tsx` |
+| Sign-in fields | `login-email`, `login-password`, `login-submit` | `auth/Login.tsx` |
+| Dashboard heading | `dashboard-heading` | `Dashboard.tsx` |
+
+The example page opened by `open-example` is a learner artifact and carries no
+test attributes; the journey only asserts it has exactly one `<h1>`, which is the
+check Lesson 4 teaches.
+
+`tests/Feature/PilotBrowserSelectorsTest.php` fails the suite when the pilot uses
+an id that does not exist in `resources/js`, so a renamed attribute is caught by
+`composer test` instead of on the next daily production run. It also rejects
+`getByRole`/`getByLabel` in the pilot script, which is what made the journey
+depend on copy in the first place.
+
 ## Extending the journey
 
 When a feature is added:

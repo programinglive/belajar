@@ -233,7 +233,7 @@ export default function FirstWebPage() {
                         <span>•</span>
                         <span>100% Gratis</span>
                     </div>
-                    <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
+                    <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4" data-testid="track-title">
                         Build a simple personal webpage
                     </h1>
                     <p className="text-base sm:text-lg text-blue-100 leading-relaxed mb-6">
@@ -275,7 +275,12 @@ export default function FirstWebPage() {
                                     Unduh styles.css ↓
                                 </Button>
                             </a>
-                            <a href="/learn/personal-page/example/index.html" target="_blank" rel="noreferrer">
+                            <a
+                                href="/learn/personal-page/example/index.html"
+                                target="_blank"
+                                rel="noreferrer"
+                                data-testid="open-example"
+                            >
                                 <Button size="sm" className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs">
                                     Buka Contoh Selesai ↗
                                 </Button>
@@ -336,7 +341,7 @@ export default function FirstWebPage() {
                                         </Badge>
                                     )}
                                 </div>
-                                <CardTitle className="text-xl font-bold text-[#0F172A] pt-1">
+                                <CardTitle className="text-xl font-bold text-[#0F172A] pt-1" data-testid={`lesson-${lesson.number}`}>
                                     {lesson.title}
                                 </CardTitle>
                             </CardHeader>
@@ -422,7 +427,7 @@ export default function FirstWebPage() {
                                 </Badge>
                             )}
                         </div>
-                        <CardTitle className="text-xl font-bold text-[#0F172A] pt-1">
+                        <CardTitle className="text-xl font-bold text-[#0F172A] pt-1" data-testid="capstone-title">
                             Selesaikan Halaman Profil Versimu
                         </CardTitle>
                         <p className="text-xs text-[#475569]">
