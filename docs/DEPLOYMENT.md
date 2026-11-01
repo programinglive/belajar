@@ -44,14 +44,21 @@ GitHub Actions CI: <https://github.com/programinglive/belajar/actions>
 ## There is no deploy poller
 
 Earlier versions of this document described `/root/command/deploy_all.sh` running
-from cron every five minutes. Checked on 1 November 2026 on `bw-server-clean`:
-neither the script nor the cron entry exists. Releases accumulated without being
-deployed, and production stayed on `v0.0.13` while `master` was at `v0.0.16`,
-which made the production pilot fail against a build that was three weeks old.
+from cron every five minutes. That poller belonged to the **old** `bw-server`: it
+fetched tags and deployed the newest one for each configured project, and because
+it ran every five minutes it could overwrite manual work under `/var/www`. During
+the cutover to `bw-server-clean` on 28 October 2026 the runbook
+(`docs/arsip/RUNBOOK-ERADICATION.md`, section 3.1) therefore required the cron entry
+to be disabled first. Nothing replaced it.
 
-Deployment is therefore **manual and explicit**. If automatic deployment is wanted
-later, add a cron entry that runs `scripts/deploy-production.sh` and keep this
-document in step with it — do not reintroduce a poller only in prose.
+The result went unnoticed for days: releases were tagged but never deployed,
+production stayed on `v0.0.13` while `master` reached `v0.0.16`, and the production
+pilot failed against a build three weeks old.
+
+Deployment is therefore **manual and explicit**, through
+`scripts/deploy-production.sh`. If automatic deployment is wanted again, add a cron
+entry that runs that script and update this document in the same change — do not
+reintroduce a poller only in prose.
 
 ## Verify deployment
 
