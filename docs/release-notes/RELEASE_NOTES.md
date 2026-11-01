@@ -2,6 +2,7 @@
 
 | Version | Release Date | Highlight |
 |---------|--------------|-----------|
+| 0.0.14 | 2026-11-01 | update release notes for v0.0.13 (69c329d) |
 | 0.0.13 | 2026-10-07 | update release notes for v0.0.12 (3776c71) |
 | 0.0.12 | 2026-10-07 | add implementation plan for javascript logic and dom track (29012ba) |
 | 0.0.11 | 2026-10-07 | add implementation plan for track catalog and dashboard (ffc8e77) |
@@ -22,6 +23,14 @@
 
 
 
+
+
+## 0.0.14 – 📝 Documentation
+
+Released on **2026-11-01**.
+
+- update release notes for v0.0.13 (69c329d)
+- **pilot:** cari elemen lewat data-testid, bukan teks UI yang berubah saat rebrand (bac8c91)
 
 ## 0.0.13 – 📝 Documentation
 
