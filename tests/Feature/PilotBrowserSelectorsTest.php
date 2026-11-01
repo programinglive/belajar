@@ -32,6 +32,17 @@ class PilotBrowserSelectorsTest extends TestCase
         $this->assertStringContainsString('getByTestId(', $script);
     }
 
+    public function test_pilot_does_not_assume_the_url_after_sign_in(): void
+    {
+        // Produksi mengarahkan ke /dashboard, bukan /. Menunggu URL tertentu
+        // membuat pilot gagal padahal login berhasil; yang penting dashboard
+        // tampil, dan itu diperiksa lewat data-testid.
+        $script = file_get_contents(base_path(self::SMOKE_SCRIPT));
+
+        $this->assertStringNotContainsString('waitForURL', $script);
+        $this->assertStringContainsString("getByTestId('dashboard-heading')", $script);
+    }
+
     public function test_every_pilot_test_id_exists_in_the_react_source(): void
     {
         $available = $this->testIdsInSource();

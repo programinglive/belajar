@@ -67,11 +67,11 @@ async function main() {
     await page.goto(`${baseUrl}/login`, { waitUntil: 'networkidle' })
     await page.getByTestId('login-email').fill(email)
     await page.getByTestId('login-password').fill(password)
-    await Promise.all([
-      page.waitForURL(`${baseUrl}/`, { timeout: 30_000 }),
-      page.getByTestId('login-submit').click(),
-    ])
-    await page.getByTestId('dashboard-heading').waitFor()
+    // Jangan menebak URL tujuan setelah masuk: produksi mengarah ke /dashboard,
+    // dan menunggu '/' membuat pilot gagal walau login berhasil. Yang penting
+    // adalah dashboard pembelajar benar-benar tampil.
+    await page.getByTestId('login-submit').click()
+    await page.getByTestId('dashboard-heading').waitFor({ timeout: 30_000 })
 
     console.log('Browser pilot completed homepage, learning track, example, and sign-in checks.')
   } finally {

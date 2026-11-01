@@ -38,6 +38,12 @@ The example page opened by `open-example` is a learner artifact and carries no
 test attributes; the journey only asserts it has exactly one `<h1>`, which is the
 check Lesson 4 teaches.
 
+The journey also never asserts a URL it cannot control after an action. Signing in
+redirects to `/dashboard`, and an earlier version waited for `/`, so a working
+sign-in still failed the pilot. Wait for a `data-testid` on the page that should
+appear instead; `tests/Feature/PilotBrowserSelectorsTest.php` rejects `waitForURL`
+in the pilot for that reason.
+
 `tests/Feature/PilotBrowserSelectorsTest.php` fails the suite when the pilot uses
 an id that does not exist in `resources/js`, so a renamed attribute is caught by
 `composer test` instead of on the next daily production run. It also rejects
