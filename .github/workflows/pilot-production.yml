@@ -100,8 +100,11 @@ jobs:
           BELAJAR_PILOT_EMAIL: ${{ secrets.BELAJAR_PILOT_EMAIL }}
           BELAJAR_PILOT_PASSWORD: ${{ secrets.BELAJAR_PILOT_PASSWORD }}
 
+      # Pemberitahuan, bukan syarat lulus: webhook yang sudah dihapus pernah
+      # membuat pilot merah padahal journey-nya lulus.
       - name: Report result to Discord
         if: always() && steps.pilot.outputs.configured == 'true'
+        continue-on-error: true
         run: node scripts/post-pilot-result.cjs
         env:
           DISCORD_PILOT_WEBHOOK_URL: ${{ secrets.DISCORD_PILOT_WEBHOOK_URL }}

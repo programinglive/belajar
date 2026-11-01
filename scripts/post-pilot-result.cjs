@@ -46,5 +46,9 @@ async function main() {
 
 main().catch((error) => {
   console.error(error.message)
+  // Anotasi agar webhook mati tetap terlihat tanpa menggagalkan pilot yang lulus.
+  console.log(
+    `::warning::Laporan Discord gagal (${error.message}). Hasil pilot tidak terpengaruh; periksa secret DISCORD_PILOT_WEBHOOK_URL.`
+  )
   process.exitCode = 1
 })

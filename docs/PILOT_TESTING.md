@@ -44,6 +44,17 @@ sign-in still failed the pilot. Wait for a `data-testid` on the page that should
 appear instead; `tests/Feature/PilotBrowserSelectorsTest.php` rejects `waitForURL`
 in the pilot for that reason.
 
+## The report is a notification, not a gate
+
+`Report result to Discord` always runs, and it is `continue-on-error`. On
+1 November 2026 the webhook had been deleted (HTTP 404) while both journeys passed,
+so the pilot failed every day for a week and buried the signal it exists to send.
+The reporter now prints a `::warning::` naming `DISCORD_PILOT_WEBHOOK_URL`, and only
+`Enforce pilot result` decides pass or fail. `PilotReportTest` locks both rules.
+
+A webhook that responds 404 has been deleted; create a new one in
+**Edit Channel → Integrations → Webhooks** and replace the secret.
+
 ## The pilot waits for the deployment
 
 A journey can only be trusted if it runs against the release it claims to test.
