@@ -44,6 +44,16 @@ sign-in still failed the pilot. Wait for a `data-testid` on the page that should
 appear instead; `tests/Feature/PilotBrowserSelectorsTest.php` rejects `waitForURL`
 in the pilot for that reason.
 
+## The pilot waits for the deployment
+
+A journey can only be trusted if it runs against the release it claims to test.
+Deployment is manual (`docs/DEPLOYMENT.md`), so a tag-triggered pilot starts before
+the new build is live. The workflow therefore polls `GET /api/version` — which
+reports the version in the deployed `package.json` — for up to ten minutes and only
+then runs the journeys. `ApiVersionTest` keeps that endpoint honest.
+
+Scheduled and manually dispatched runs skip the wait: they check whatever is live.
+
 `tests/Feature/PilotBrowserSelectorsTest.php` fails the suite when the pilot uses
 an id that does not exist in `resources/js`, so a renamed attribute is caught by
 `composer test` instead of on the next daily production run. It also rejects

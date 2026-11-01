@@ -41,6 +41,17 @@ Route::get('/learning-tracks/{track}/progress', [LearningTrackProgressController
 Route::post('/learning-tracks/{track}/progress', [LearningTrackProgressController::class, 'store']);
 Route::delete('/learning-tracks/{track}/progress', [LearningTrackProgressController::class, 'destroy']);
 
+// Penanda versi yang benar-benar hidup di server. Pilot produksi menunggu
+// angka ini sama dengan tag rilis sebelum menguji UI; tanpa itu pilot bisa
+// menguji build lama dan melaporkan kegagalan palsu (kejadian 1 Nov 2026).
+Route::get('/version', function () {
+    $package = json_decode(file_get_contents(base_path('package.json')), true);
+
+    return response()->json([
+        'version' => $package['version'] ?? null,
+    ]);
+})->name('api.version');
+
 Route::get('/learning-tracks/first-web-page', function () {
     $package = json_decode(file_get_contents(base_path('package.json')), true);
 

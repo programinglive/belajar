@@ -3,34 +3,76 @@
 ## Target
 
 - Domain: `belajar.programinglive.com`
-- GCP VM: `bw-server` (`winged-ratio-344917`, `asia-southeast2-a`)
-- Application root: `/usr/share/nginx/belajar`
-- Web server: Nginx + PHP-FPM; Nginx serves `/usr/share/nginx/belajar/public`
+- GCP VM: `bw-server-clean` (project `winged-ratio-344917`, zone `asia-southeast2-a`)
+- Application root: `/var/www/belajar`
+- Webroot: `/var/www/belajar/public` (Nginx + PHP 8.3 FPM)
+- TLS terminates at the GCP HTTPS load balancer, which forwards HTTP to Nginx on port 80.
+
+Reach the server over Tailscale:
+
+```bash
+ssh root@100.107.65.21
+```
+
+`gcloud compute ssh --tunnel-through-iap` fails on Windows (`plink.exe`), so do not
+conclude from that error that the host is unreachable.
 
 ## Release and deployment flow
 
-1. Run the project checks and build locally or in GitHub Actions.
-2. Wait for the latest `master` CI run to pass, then create/publish a patch release with `npm run release:patch` (or the corresponding `release:minor` / `release:major` command). This creates the `v*` tag consumed by the server poller.
-3. A root cron job on `bw-server` runs `/root/command/deploy_all.sh` every five minutes. The script fetches tags and deploys the newest tag for each configured project; Belajar is configured as `/usr/share/nginx/belajar` with the project key `belajar`.
-4. Deployment builds in `/tmp/deploy_build_belajar`, syncs the release back while preserving `.env` and `storage`, runs Laravel migrations, and refreshes Laravel caches.
+1. Run the checks and build locally or in GitHub Actions.
+2. Wait for CI on the release commit to pass, then publish a patch release with
+   `npm run release:patch` (or `release:minor` / `release:major`). That commits the
+   version bump, updates `CHANGELOG.md`, and creates the `v*` tag.
+3. Deploy that tag on the server:
+
+   ```bash
+   ssh root@100.107.65.21 '/var/www/belajar/scripts/deploy-production.sh v0.0.17'
+   ```
+
+   Without an argument the script deploys the newest tag. It fetches tags, checks
+   the tag out, installs PHP and JavaScript dependencies, builds assets, runs
+   `php artisan migrate --force`, refreshes caches, fixes ownership, and finally
+   refuses to report success unless `/api/version` on the live site returns the
+   tag's version.
+4. The production pilot picks the release up automatically. When the workflow is
+   triggered by a tag it polls `/api/version` for up to ten minutes and only then
+   runs the API and browser journeys, so a pilot run started before the deploy
+   finishes waits instead of reporting a false failure.
 
 GitHub Actions CI: <https://github.com/programinglive/belajar/actions>
 
+## There is no deploy poller
+
+Earlier versions of this document described `/root/command/deploy_all.sh` running
+from cron every five minutes. Checked on 1 November 2026 on `bw-server-clean`:
+neither the script nor the cron entry exists. Releases accumulated without being
+deployed, and production stayed on `v0.0.13` while `master` was at `v0.0.16`,
+which made the production pilot fail against a build that was three weeks old.
+
+Deployment is therefore **manual and explicit**. If automatic deployment is wanted
+later, add a cron entry that runs `scripts/deploy-production.sh` and keep this
+document in step with it — do not reintroduce a poller only in prose.
+
 ## Verify deployment
 
-```powershell
-gcloud compute ssh gpcbeautyworld@bw-server --project=winged-ratio-344917 --zone=asia-southeast2-a --tunnel-through-iap --command "git -C /usr/share/nginx/belajar log -1 --oneline --decorate; git -C /usr/share/nginx/belajar describe --tags --exact-match"
+```bash
+curl -fsS https://belajar.programinglive.com/api/version
+ssh root@100.107.65.21 'cd /var/www/belajar && git describe --tags --exact-match'
 ```
 
-Review the server deployment log if a release does not appear:
+Both must report the same version. The deployed commit and tag:
 
-```powershell
-gcloud compute ssh gpcbeautyworld@bw-server --project=winged-ratio-344917 --zone=asia-southeast2-a --tunnel-through-iap --command "sudo tail -100 /var/log/deploy_all.log"
+```bash
+ssh root@100.107.65.21 'git -C /var/www/belajar log -1 --oneline --decorate'
 ```
 
 ## Operational notes
 
-- Deployment is tag-driven, not branch-driven. A push to `master` alone does not deploy.
-- The server polls tags every five minutes; CI and the server poller are not currently coupled. Ensure CI on the release commit's `master` code has passed before running the release command.
-- `.env` and `storage` are excluded from the code sync. Database migrations do run with `--force` on deployment.
-- Production changes should be followed by an HTTP smoke test and a check that the deployed tag matches the release.
+- Deployment is tag-driven, not branch-driven. Pushing to `master` alone does not deploy.
+- `scripts/deploy-production.sh` refuses to run when tracked files have uncommitted
+  changes, and refuses to continue when the tag's `package.json` version differs from
+  the tag name.
+- `.env` and `storage` are never touched by a checkout. Migrations do run with
+  `--force` on every deployment.
+- Production changes should be followed by a pilot run; the daily schedule at
+  01:17 UTC and `workflow_dispatch` both cover that.
