@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/programinglive/belajar/compare/v0.0.15...v0.0.16) (2026-11-01)
+
+
+### 🐛 Bug Fixes
+
+* **pilot:** tunggu dashboard, bukan URL '/' setelah login ([7c84df0](https://github.com/programinglive/belajar/commit/7c84df06b6cf3d88271e0aae55f52796892342e6))
+
 ### [0.0.15](https://github.com/programinglive/belajar/compare/v0.0.14...v0.0.15) (2026-11-01)
 
 
