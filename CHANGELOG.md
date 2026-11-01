@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/programinglive/belajar/compare/v0.0.16...v0.0.17) (2026-11-01)
+
+
+### 📝 Documentation
+
+* update release notes for v0.0.16 ([04a420a](https://github.com/programinglive/belajar/commit/04a420a1005cb70933b9a80e5ee3796e6fa3bc8a))
+
+
+### 🐛 Bug Fixes
+
+* **deploy:** skrip deploy yang bisa diulang, penanda /api/version, dan pilot yang menunggu deploy ([a0d54b8](https://github.com/programinglive/belajar/commit/a0d54b87449984fdc233568986a14d8793ce492e))
+
 ### [0.0.16](https://github.com/programinglive/belajar/compare/v0.0.15...v0.0.16) (2026-11-01)
 
 
