@@ -2,6 +2,7 @@
 
 | Version | Release Date | Highlight |
 |---------|--------------|-----------|
+| 0.0.16 | 2026-11-01 | **pilot:** tunggu dashboard, bukan URL '/' setelah login (7c84df0) |
 | 0.0.15 | 2026-11-01 | update release notes for v0.0.14 (f3a6a67) |
 | 0.0.14 | 2026-11-01 | update release notes for v0.0.13 (69c329d) |
 | 0.0.13 | 2026-10-07 | update release notes for v0.0.12 (3776c71) |
@@ -26,6 +27,13 @@
 
 
 
+
+
+## 0.0.16 – 🐛 Bug Fixes
+
+Released on **2026-11-01**.
+
+- **pilot:** tunggu dashboard, bukan URL '/' setelah login (7c84df0)
 
 ## 0.0.15 – 📝 Documentation
 
