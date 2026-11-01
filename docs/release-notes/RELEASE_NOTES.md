@@ -2,6 +2,7 @@
 
 | Version | Release Date | Highlight |
 |---------|--------------|-----------|
+| 0.0.17 | 2026-11-01 | update release notes for v0.0.16 (04a420a) |
 | 0.0.16 | 2026-11-01 | **pilot:** tunggu dashboard, bukan URL '/' setelah login (7c84df0) |
 | 0.0.15 | 2026-11-01 | update release notes for v0.0.14 (f3a6a67) |
 | 0.0.14 | 2026-11-01 | update release notes for v0.0.13 (69c329d) |
@@ -28,6 +29,14 @@
 
 
 
+
+
+## 0.0.17 – 📝 Documentation
+
+Released on **2026-11-01**.
+
+- update release notes for v0.0.16 (04a420a)
+- **deploy:** skrip deploy yang bisa diulang, penanda /api/version, dan pilot yang menunggu deploy (a0d54b8)
 
 ## 0.0.16 – 🐛 Bug Fixes
 
