@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/programinglive/belajar/compare/v0.0.14...v0.0.15) (2026-11-01)
+
+
+### 📝 Documentation
+
+* update release notes for v0.0.14 ([f3a6a67](https://github.com/programinglive/belajar/commit/f3a6a6729212d04d2c337ea17e78753ab5bb29b3))
+
 ### [0.0.14](https://github.com/programinglive/belajar/compare/v0.0.13...v0.0.14) (2026-11-01)
 
 
