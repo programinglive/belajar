@@ -8,14 +8,15 @@
     "pilot:production": "node scripts/pilot-api-smoke.cjs",
     "pilot:browser": "node scripts/pilot-browser-smoke.cjs",
     "prepare": "husky || echo \"Husky not installed\"",
-    "release": "node scripts/release.cjs",
-    "release:major": "node scripts/release.cjs major",
-    "release:minor": "node scripts/release.cjs minor",
-    "release:patch": "node scripts/release.cjs patch"
+    "release": "commiter release",
+    "release:major": "commiter release major",
+    "release:minor": "commiter release minor",
+    "release:patch": "commiter release patch",
+    "release:first": "commiter release --first-release"
   },
   "dependencies": {
     "@inertiajs/react": "^2.0.0",
-    "@programinglive/commiter": "^1.2.8",
+    "@programinglive/commiter": "^1.5.1",
     "@radix-ui/react-label": "^2.1.8",
     "@radix-ui/react-slot": "^1.2.4",
     "@tailwindcss/postcss": "^4.1.17",
@@ -93,5 +94,10 @@
       }
     ]
   },
-  "version": "0.0.17"
+  "version": "0.0.17",
+  "commiter": {
+    "release": {
+      "branch": "master"
+    }
+  }
 }
